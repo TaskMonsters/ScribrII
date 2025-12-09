@@ -18,6 +18,367 @@
             color: #000000;
             min-height: 100vh;
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .passkey-content {
+            background: rgba(30, 30, 30, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .passkey-content h2 {
+            color: #ffffff;
+        }
+        
+        body.dark-mode .passkey-input {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .passkey-btn {
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+        }
+        
+        body.dark-mode .story-info,
+        body.dark-mode .grid-section,
+        body.dark-mode .snowflake-section,
+        body.dark-mode .writing-area,
+        body.dark-mode .note-card,
+        body.dark-mode .category-card {
+            background: rgba(30, 30, 30, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .story-info input,
+        body.dark-mode .grid-cell,
+        body.dark-mode textarea,
+        body.dark-mode input[type="text"],
+        body.dark-mode input[type="number"],
+        body.dark-mode input {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode input::placeholder,
+        body.dark-mode textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+        
+        body.dark-mode .nav-tab {
+            background: rgba(30, 30, 30, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0a0a0;
+        }
+        
+        body.dark-mode .nav-tab.active {
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+            color: white;
+        }
+        
+        body.dark-mode .nav-tab:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        
+        .header h1,
+        .header p,
+        h2,
+        h3,
+        label {
+            color: #000000;
+        }
+        
+        body.dark-mode,
+        body.dark-mode *:not(.btn-danger):not(.btn-warning) {
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode .header h1,
+        body.dark-mode .header p,
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode h5,
+        body.dark-mode h6,
+        body.dark-mode label,
+        body.dark-mode p,
+        body.dark-mode span,
+        body.dark-mode div,
+        body.dark-mode a {
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode .note-title,
+        body.dark-mode .note-description,
+        body.dark-mode .category-title,
+        body.dark-mode .category-description,
+        body.dark-mode .category-name {
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode .category-count,
+        body.dark-mode .category-card .category-count,
+        body.dark-mode div.category-count {
+            color: #a78bfa !important;
+        }
+        
+        body.dark-mode .category-card {
+            background: rgba(30, 30, 30, 0.98) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        body.dark-mode .grid-table {
+            background: rgba(30, 30, 30, 0.98);
+        }
+        
+        body.dark-mode .grid-table th {
+            background: rgba(40, 40, 40, 0.98) !important;
+            color: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        body.dark-mode .grid-table th input {
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode .grid-table td {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(40, 40, 40, 0.98) !important;
+        }
+        
+        body.dark-mode .grid-cell {
+            background: transparent !important;
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode .tools-dropdown-menu {
+            background: rgba(30, 30, 30, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .tools-dropdown-item {
+            color: #e0e0e0;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .tools-dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .dropdown-content {
+            background: rgba(30, 30, 30, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .floating-timer {
+            background: rgba(30, 30, 30, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .timer-title {
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .note-modal,
+        body.dark-mode .category-modal {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        body.dark-mode .note-modal-content,
+        body.dark-mode .category-modal-content {
+            background: rgba(30, 30, 30, 0.98) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        body.dark-mode .note-modal-header,
+        body.dark-mode .note-form-group,
+        body.dark-mode .formatting-toolbar {
+            background: transparent !important;
+        }
+        
+        body.dark-mode .note-form-label {
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode #noteCreationSection,
+        body.dark-mode #searchResultsSection,
+        body.dark-mode #categoryNotesViewer {
+            background: rgba(30, 30, 30, 0.98) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        body.dark-mode #noteCreationTitle,
+        body.dark-mode #categoryNotesTitle,
+        body.dark-mode #noteCreationSection h3,
+        body.dark-mode #noteCreationSection label,
+        body.dark-mode #categoryNotesViewer h3 {
+            color: #ffffff !important;
+        }
+        
+        body.dark-mode #newNoteTitle,
+        body.dark-mode #newNoteDescription,
+        body.dark-mode #newNoteTags,
+        body.dark-mode #newNoteSource,
+        body.dark-mode #newNoteImage {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            color: #ffffff !important;
+        }
+        
+        /* Dark mode plot points */
+        body.dark-mode .plot-point-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .plot-point-section:hover {
+            border-color: rgba(236, 72, 153, 0.5);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
+        }
+        
+        body.dark-mode .plot-point-name-input,
+        body.dark-mode .plot-point-textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .plot-point-textarea:focus {
+            border-color: rgba(236, 72, 153, 0.5);
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+        }
+        
+        body.dark-mode .drag-handle {
+            color: #666;
+        }
+        
+        body.dark-mode .note-modal-title {
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .note-form-input,
+        body.dark-mode .note-form-textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .btn {
+            color: #ffffff;
+        }
+        
+        body.dark-mode .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .scroll-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .snowflake-step {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .snowflake-step.active {
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .filter-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .filter-tag.active {
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .image-drop-zone {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .source-link-item input {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        /* Dark mode logo squares */
+        body.dark-mode .logo-square:nth-child(2),
+        body.dark-mode .logo-square:nth-child(3),
+        body.dark-mode .logo-square:nth-child(4) {
+            background: #b0b0b0;
+        }
+        
+        /* Dark mode passkey page */
+        body.dark-mode .passkey-content h1,
+        body.dark-mode .passkey-content h2,
+        body.dark-mode .passkey-content p {
+            color: #b0b0b0 !important;
+        }
+        
+        /* Research page dark mode */
+        body.dark-mode .research-header h2,
+        body.dark-mode .category-icon,
+        body.dark-mode .add-category-btn {
+            color: #ffffff;
+        }
+        
+        body.dark-mode .search-container input {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .search-container input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        body.dark-mode .note-header,
+        body.dark-mode .note-tags,
+        body.dark-mode .note-tag {
+            color: #ffffff;
+        }
+        
+        body.dark-mode .note-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        body.dark-mode .formatting-toolbar button {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        body.dark-mode .formatting-toolbar button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        body.dark-mode .image-drop-zone-text,
+        body.dark-mode .image-drop-zone-icon {
+            color: rgba(255, 255, 255, 0.7);
         }
 
         /* Passkey Modal */
@@ -27,12 +388,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.05);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 1000;
+        }
+        
+        body.dark-mode .passkey-modal {
+            background: rgba(0, 0, 0, 0.9);
         }
 
         .passkey-content {
@@ -63,7 +428,7 @@
         }
 
         .logo-square:nth-child(1) { 
-            background: #000000; 
+            background: linear-gradient(135deg, #667eea, #764ba2);
             position: relative;
             display: flex;
             align-items: center;
@@ -311,21 +676,41 @@
         }
 
         .btn-secondary {
-            background: white;
+            position: relative;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
             color: #000000;
-            border: 2px solid transparent;
-            background-image: linear-gradient(white, white), linear-gradient(135deg, #c1ff00, #ffeb00, #ffa500, #ff6b00);
-            background-origin: border-box;
-            background-clip: padding-box, border-box;
+            border: 3px solid transparent;
+            border-radius: 10px;
             font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-clip: padding-box;
+        }
+
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: -1;
+            padding: 3px;
         }
 
         .btn-secondary:hover {
-            background-image: linear-gradient(#f8f8f8, #f8f8f8), linear-gradient(135deg, #c1ff00, #ffeb00, #ffa500, #ff6b00);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
         }
 
         .btn-warning {
-            background: #ff8800;
+            background: #6366f1;
             color: white;
         }
 
@@ -343,11 +728,10 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             z-index: 100;
             min-width: 200px;
             top: 100%;
@@ -361,8 +745,17 @@
         .dropdown-item {
             padding: 12px 20px;
             cursor: pointer;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #f0f0f0;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+            width: 100%;
+            background: none; /* Ensure no default button background */
+            border: none; /* Ensure no default button border */
+            color: #000000; /* Ensure text is black in light mode */
+            font-size: 14px;
         }
 
         .dropdown-item:last-child {
@@ -370,7 +763,7 @@
         }
 
         .dropdown-item:hover {
-            background: rgba(0, 0, 0, 0.15);
+            background: #f0f0f0; /* Slightly darker hover for better contrast */
         }
 
         /* Grid Table Container - COMPLETELY REBUILT */
@@ -670,7 +1063,7 @@
         }
 
         .snowflake-tab.active {
-            background: #333333;
+            background: #000000;
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(165, 94, 234, 0.3);
@@ -710,6 +1103,90 @@
             margin-bottom: 8px;
             color: #000000;
             font-weight: 600;
+        }
+        
+        /* Plot Point Sections */
+        .plot-point-section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            cursor: move;
+            transition: all 0.3s ease;
+        }
+        
+        .plot-point-section:hover {
+            border-color: rgba(167, 139, 250, 0.5);
+            box-shadow: 0 4px 12px rgba(167, 139, 250, 0.2);
+        }
+        
+        .plot-point-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .drag-handle {
+            font-size: 18px;
+            color: #999;
+            cursor: grab;
+            user-select: none;
+        }
+        
+        .drag-handle:active {
+            cursor: grabbing;
+        }
+        
+        .plot-point-name-input {
+            flex: 1;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            color: #000000;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .plot-point-delete-btn {
+            width: 32px;
+            height: 32px;
+            background: #ef4444;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        
+        .plot-point-delete-btn:hover {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
+        
+        .plot-point-textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            color: #000000;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        
+        .plot-point-textarea:focus {
+            outline: none;
+            border-color: rgba(167, 139, 250, 0.5);
+            box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.1);
         }
 
         .form-group input,
@@ -1752,7 +2229,7 @@
         .relationship-line.friendship { background: linear-gradient(90deg, transparent, #4ecdc4, transparent); }
         .relationship-line.professional { background: linear-gradient(90deg, transparent, #45b7d1, transparent); }
         .relationship-line.antagonistic { background: linear-gradient(90deg, transparent, #cc0000, transparent); }
-        .relationship-line.mentor { background: linear-gradient(90deg, transparent, #ff8800, transparent); }
+        .relationship-line.mentor { background: linear-gradient(90deg, transparent, #6366f1, transparent); }
 
         .relationship-legend {
             display: flex;
@@ -1783,7 +2260,7 @@
         .legend-color.friendship { background: #4ecdc4; }
         .legend-color.professional { background: #45b7d1; }
         .legend-color.antagonistic { background: #cc0000; }
-        .legend-color.mentor { background: #ff8800; }
+        .legend-color.mentor { background: #6366f1; }
 
         /* Commenting System Styles */
         /* Banner Settings */
@@ -1904,10 +2381,14 @@
         .banner-upload-btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid transparent;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
             border-radius: 12px;
-            color: white;
+            color: #000000;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -1915,6 +2396,7 @@
         }
         
         .banner-upload-btn:hover {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
@@ -1936,8 +2418,13 @@
         }
         
         .banner-modal-buttons .save-btn {
-            background: linear-gradient(135deg, #000000, #059669);
-            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid transparent;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(135deg, #000000, #059669);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            color: #000000;
         }
         
         .banner-modal-buttons .cancel-btn {
@@ -1977,29 +2464,7 @@
             display: none;
         }
 
-        .commenting-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        }
-
-        .commenting-toggle label {
-            color: #000000;
-            font-size: 14px;
-            font-weight: 500;
-            margin: 0;
-        }
-
+        /* Comment switch styles for dropdown */
         .comment-switch {
             position: relative;
             width: 50px;
@@ -2011,7 +2476,7 @@
         }
 
         .comment-switch.active {
-            background: #000000;
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
         }
 
         .comment-switch-handle {
@@ -2240,6 +2705,13 @@
             color: #000000;
         }
 
+        .timer-header-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .timer-minimize,
         .timer-close {
             background: none;
             border: none;
@@ -2288,19 +2760,47 @@
         }
 
         .timer-btn.start {
-            background: linear-gradient(135deg, #c1ff00, #ffeb00, #ffa500, #ff6b00);
+            position: relative;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             color: #000000;
+            border: 3px solid transparent;
             font-weight: 700;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background-clip: padding-box;
+        }
+
+        .timer-btn.start::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: -1;
+            padding: 3px;
         }
 
         .timer-btn.start:hover {
-            filter: brightness(1.1);
-            box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
         }
 
         .timer-btn.pause {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: #000000;
+            border: 2px solid transparent;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(135deg, #f59e0b, #d97706);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
         }
 
         .timer-btn.reset {
@@ -2333,34 +2833,191 @@
 
         .timer-input:focus {
             outline: none;
-            border-color: #6366f1;
+            border-color: #000000;
         }
 
-        .timer-toggle-btn {
+        /* Minimized Timer */
+        .minimized-timer {
             position: fixed;
             top: 20px;
             left: 20px;
-            background: linear-gradient(135deg, #c1ff00, #ffeb00, #ffa500, #ff6b00);
-            color: #000000;
-            border: none;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 12px;
-            padding: 12px 20px;
+            padding: 12px 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
             cursor: pointer;
-            font-size: 14px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .minimized-timer.hidden {
+            display: none;
+        }
+
+        .minimized-timer:hover {
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .minimized-timer-icon {
+            font-size: 18px;
+        }
+
+        .minimized-timer-display {
+            font-size: 16px;
             font-weight: 600;
-            box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
-            transition: all 0.2s ease;
+            color: #000000;
+            font-variant-numeric: tabular-nums;
+        }
+
+        body.dark-mode .minimized-timer {
+            background: rgba(30, 30, 30, 0.98);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode .minimized-timer:hover {
+            background: rgba(40, 40, 40, 0.98);
+        }
+
+        body.dark-mode .minimized-timer-display {
+            color: #ffffff;
+        }
+
+        /* Tools Dropdown Menu */
+        .tools-dropdown {
+            position: fixed;
+            top: 20px;
+            left: 20px;
             z-index: 1001;
         }
 
-        .timer-toggle-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(255, 165, 0, 0.5);
-            filter: brightness(1.1);
+        .tools-toggle-btn {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: #000000;
+            border: 3px solid transparent;
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-clip: padding-box;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        body.dark-mode .tools-toggle-btn {
+            color: #ffffff;
         }
 
-        .timer-toggle-btn.hidden {
+        .tools-toggle-btn::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: -1;
+            padding: 3px;
+        }
+
+        .tools-toggle-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+        }
+
+        .tools-dropdown-menu {
             display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 8px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            min-width: 200px;
+            overflow: hidden;
+        }
+
+        .tools-dropdown.active .tools-dropdown-menu {
+            display: block;
+        }
+
+        .tools-dropdown-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #000000;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tools-dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .tools-dropdown-item:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .tools-dropdown-item .item-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Dark mode toggle switch in dropdown */
+        .mode-switch {
+            position: relative;
+            width: 50px;
+            height: 24px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mode-switch.active {
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+        }
+
+        .mode-switch-handle {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .mode-switch.active .mode-switch-handle {
+            transform: translateX(26px);
+        }         display: none;
         }
 
         /* Research Page Styles */
@@ -2489,12 +3146,55 @@
             padding: 20px;
             cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .category-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             border-color: #000000;
+        }
+
+        .category-delete-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 24px;
+            height: 24px;
+            background: rgba(0, 0, 0, 0.1);
+            color: #000000;
+            border: none;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 10;
+            line-height: 1;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card:hover .category-delete-btn {
+            display: flex;
+        }
+
+        .category-delete-btn:hover {
+            background: rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .category-delete-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        body.dark-mode .category-delete-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .category-icon {
@@ -2508,10 +3208,10 @@
             margin-bottom: 15px;
         }
 
-        .category-icon.worldbuilding { background: linear-gradient(135deg, #000000, #059669); }
+        .category-icon.worldbuilding { background: linear-gradient(135deg, #00ba2d, #059669); }
         .category-icon.history { background: linear-gradient(135deg, #f59e0b, #d97706); }
         .category-icon.science { background: linear-gradient(135deg, #06b6d4, #0891b2); }
-        .category-icon.mythology { background: linear-gradient(135deg, #ec4899, #db2777); }
+        .category-icon.mythology { background: linear-gradient(135deg, #5b21b6, #4c51bf); }
         .category-icon.character { background: linear-gradient(135deg, #f59e0b, #d97706); }
 
         .category-name {
@@ -2733,6 +3433,109 @@
         .note-tags-input-container:focus-within {
             border-color: #000000;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Custom Tags Dropdown */
+        .custom-tags-dropdown {
+            position: relative;
+            width: 100%;
+        }
+        
+        .tags-dropdown-button {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            color: #000000;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .tags-dropdown-button:hover {
+            border-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .tags-dropdown-button.active {
+            border-color: #000000;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dropdown-arrow {
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .tags-dropdown-button.active .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .tags-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 8px;
+            background: rgba(255,255,255,0.98);
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            max-height: 250px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tag-checkbox-item {
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .tag-checkbox-item:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        
+        .tag-checkbox-item input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .tag-checkbox-item label {
+            cursor: pointer;
+            flex: 1;
+            color: #000000;
+            font-size: 15px;
+        }
+        
+        body.dark-mode .tags-dropdown-button {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .tags-dropdown-menu {
+            background: rgba(30, 30, 30, 0.98);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        body.dark-mode .tag-checkbox-item {
+            color: #ffffff;
+        }
+        
+        body.dark-mode .tag-checkbox-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .tag-checkbox-item label {
+            color: #ffffff;
         }
 
         .note-tag-chip {
@@ -3052,22 +3855,1082 @@
         .category-filter-clear:hover {
             background: rgba(0, 0, 0, 0.2);
         }
-    </style>
+    
+/* VRR Styles */
+/* ========================================
+   VISUAL RESEARCH REPOSITORY (VRR) STYLES
+   Invisible UI Design - Minimal Chrome
+   ======================================== */
+
+/* VRR Container */
+.vrr-container {
+    display: flex;
+    height: calc(100vh - 200px);
+    background: transparent;
+    position: relative;
+}
+
+/* Sidebar - Collapsible Taxonomy Panel */
+.vrr-sidebar {
+    width: 260px;
+    background: transparent;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 0;
+}
+
+body.dark-mode .vrr-sidebar {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.vrr-sidebar.collapsed {
+    width: 48px;
+}
+
+.vrr-sidebar.collapsed .vrr-sidebar-content {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Sidebar Toggle */
+.vrr-sidebar-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.vrr-sidebar-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .vrr-sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Sidebar Sections */
+.vrr-sidebar-section {
+    margin-bottom: 24px;
+    padding: 0 16px;
+}
+
+.vrr-sidebar-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 12px;
+    padding: 0 4px;
+}
+
+body.dark-mode .vrr-sidebar-title {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Folder Tree */
+.vrr-folder-tree {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vrr-folder-item {
+    padding: 8px 12px;
+    margin: 2px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.vrr-folder-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .vrr-folder-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.vrr-folder-item.active {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+}
+
+body.dark-mode .vrr-folder-item.active {
+    background: rgba(102, 126, 234, 0.15);
+    color: #667eea !important;
+}
+
+.vrr-folder-icon {
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+.vrr-folder-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.vrr-folder-count {
+    font-size: 12px;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+/* Tag Cloud */
+.vrr-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.vrr-tag {
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.vrr-tag:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+body.dark-mode .vrr-tag {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .vrr-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.vrr-tag.active {
+    background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+    color: white;
+    border-color: transparent;
+}
+
+body.dark-mode .vrr-tag.active {
+    color: white !important;
+}
+
+.vrr-tag-count {
+    opacity: 0.7;
+    margin-left: 4px;
+}
+
+/* Gallery Area */
+.vrr-gallery-area {
+    flex: 1;
+    padding: 60px 20px 20px 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Gallery Header - Minimal */
+.vrr-gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0 4px;
+}
+
+.vrr-gallery-stats {
+    font-size: 13px;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.vrr-gallery-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Masonry Grid */
+.vrr-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    padding: 4px;
+}
+
+@media (max-width: 768px) {
+    .vrr-masonry {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+}
+
+/* Image Card - Invisible UI */
+.vrr-image-card {
+    position: relative;
+    background: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    aspect-ratio: 1;
+}
+
+.vrr-image-card:hover {
+    transform: translateY(-4px);
+}
+
+.vrr-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Hover Overlay - Revealed on Hover */
+.vrr-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.vrr-image-card:hover .vrr-image-overlay {
+    opacity: 1;
+}
+
+.vrr-image-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.vrr-image-meta {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.vrr-image-tag-mini {
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+/* Context Menu - Hover Reveal */
+.vrr-image-menu {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.vrr-image-card:hover .vrr-image-menu {
+    opacity: 1;
+}
+
+.vrr-image-menu-btn {
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.vrr-image-menu-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Drop Zone - Invisible Until Active */
+.vrr-drop-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(102, 126, 234, 0.05);
+    backdrop-filter: blur(10px);
+    border: 4px dashed rgba(102, 126, 234, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.vrr-drop-overlay.active {
+    display: flex;
+}
+
+.vrr-drop-message {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 40px 60px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .vrr-drop-message {
+    background: rgba(30, 30, 30, 0.98);
+}
+
+.vrr-drop-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.vrr-drop-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.vrr-drop-subtext {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* Upload Progress - Ephemeral */
+.vrr-upload-progress {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    min-width: 320px;
+    z-index: 9998;
+    animation: slideInUp 0.3s ease;
+}
+
+body.dark-mode .vrr-upload-progress {
+    background: rgba(30, 30, 30, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.vrr-upload-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.vrr-upload-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.vrr-upload-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.5;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vrr-upload-close:hover {
+    opacity: 1;
+}
+
+.vrr-upload-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .vrr-upload-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.vrr-upload-item:first-child {
+    border-top: none;
+}
+
+.vrr-upload-icon {
+    font-size: 20px;
+}
+
+.vrr-upload-info {
+    flex: 1;
+}
+
+.vrr-upload-name {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.vrr-upload-bar {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+body.dark-mode .vrr-upload-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.vrr-upload-bar-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.vrr-upload-status {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* Image Detail Modal - Full Screen Minimal */
+.vrr-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 40px;
+}
+
+.vrr-modal.active {
+    display: flex;
+}
+
+.vrr-modal-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    max-height: 900px;
+}
+
+.vrr-modal-image-container {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.vrr-modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.vrr-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.vrr-modal-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+
+.vrr-modal-metadata {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 32px;
+    overflow-y: auto;
+}
+
+body.dark-mode .vrr-modal-metadata {
+    background: rgba(30, 30, 30, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vrr-modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.vrr-form-group {
+    margin-bottom: 20px;
+}
+
+.vrr-form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+.vrr-input,
+.vrr-textarea,
+.vrr-select {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+body.dark-mode .vrr-input,
+body.dark-mode .vrr-textarea,
+body.dark-mode .vrr-select {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.vrr-input:focus,
+.vrr-textarea:focus,
+.vrr-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.vrr-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Tag Token Input */
+.vrr-tag-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-height: 44px;
+}
+
+body.dark-mode .vrr-tag-input-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.vrr-tag-token {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+    color: white;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+body.dark-mode .vrr-tag-token {
+    color: white !important;
+}
+
+.vrr-tag-token-remove {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.vrr-tag-token-remove:hover {
+    opacity: 1;
+}
+
+.vrr-tag-input-field {
+    flex: 1;
+    min-width: 120px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    padding: 6px 4px;
+}
+
+body.dark-mode .vrr-tag-input-field {
+    color: #ffffff !important;
+}
+
+/* Action Buttons */
+.vrr-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .vrr-modal-actions {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vrr-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.vrr-btn-primary {
+    background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+    color: white;
+}
+
+.vrr-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.vrr-btn-secondary {
+    background: rgba(0, 0, 0, 0.05);
+    color: inherit;
+}
+
+body.dark-mode .vrr-btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.vrr-btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .vrr-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.vrr-btn-danger {
+    background: #cc0000;
+    color: white;
+}
+
+.vrr-btn-danger:hover {
+    background: #aa0000;
+}
+
+/* Empty State */
+.vrr-empty-state {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.vrr-empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+}
+
+.vrr-empty-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.vrr-empty-text {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* Loading Skeleton */
+.vrr-skeleton {
+    background: linear-gradient(90deg, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.05) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 8px;
+}
+
+body.dark-mode .vrr-skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+    background-size: 200% 100%;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vrr-sidebar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        transform: translateX(-100%);
+    }
+    
+    body.dark-mode .vrr-sidebar {
+        background: rgba(30, 30, 30, 0.98);
+    }
+    
+    .vrr-sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .vrr-modal-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .vrr-modal-metadata {
+        max-height: 50%;
+    }
+}
+
+/* VRR Modal */
+.vrr-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding-top: 60px;
+}
+
+.vrr-modal.active {
+    display: flex !important;
+}
+
+.vrr-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+body.dark-mode .vrr-modal-content {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+.vrr-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .vrr-modal-header {
+    border-bottom-color: #444;
+}
+
+.vrr-modal-close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.vrr-modal-close:hover,
+.vrr-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+body.dark-mode .vrr-modal-close:hover,
+body.dark-mode .vrr-modal-close:focus {
+    color: #fff;
+}
+
+.vrr-modal-body {
+    display: flex;
+    gap: 20px;
+    overflow-y: auto;
+    padding-right: 10px; /* For scrollbar */
+}
+
+.vrr-modal-image {
+    max-width: 60%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.vrr-image-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.vrr-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.vrr-form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.vrr-image-details input[type="text"],
+.vrr-image-details textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+body.dark-mode .vrr-image-details input[type="text"],
+body.dark-mode .vrr-image-details textarea {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.vrr-tags-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 38px;
+    align-content: flex-start;
+}
+
+body.dark-mode .vrr-tags-display {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.vrr-modal-tag {
+    background-color: #e0e7ff;
+    color: #4338ca;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+body.dark-mode .vrr-modal-tag {
+    background-color: #4f46e5;
+    color: #e0e7ff;
+}
+
+.vrr-modal-actions {
+    margin-top: auto; /* Push buttons to the bottom */
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+body.dark-mode .vrr-modal-actions {
+    border-top-color: #444;
+}
+
+.vrr-modal-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.vrr-nav-btn {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.2s;
+}
+
+.vrr-nav-btn:hover:not(:disabled) {
+    background: #e0e0e0;
+}
+
+.vrr-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+body.dark-mode .vrr-nav-btn {
+    background: #333;
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .vrr-nav-btn:hover:not(:disabled) {
+    background: #444;
+}
+
+.vrr-image-index-display {
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .vrr-modal-body {
+        flex-direction: column;
+    }
+    .vrr-modal-image {
+        max-width: 100%;
+    }
+}
+
+</style>
 </head>
 <body>
+    <script>
+        // Load dark mode immediately to prevent flash
+        (function() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <!-- Confirmation Toast -->
     <div id="confirmationToast" class="confirmation-toast"></div>
 
     <!-- Banner Settings Button -->
     <button class="banner-settings-btn" onclick="openBannerSettings()">Customize</button>
     
+    <!-- Tools Dropdown -->
+    <div class="tools-dropdown" id="toolsDropdown">
+        <button class="tools-toggle-btn" onclick="toggleToolsDropdown()">
+            <span>🛠️ Tools</span>
+            <span style="font-size: 10px;">▼</span>
+        </button>
+        <div class="tools-dropdown-menu">
+            <div class="tools-dropdown-item" onclick="event.stopPropagation(); toggleTimer();">
+                <span class="item-label">⏱️ Timer</span>
+            </div>
+            <div class="tools-dropdown-item" onclick="event.stopPropagation();">
+                <span class="item-label">💬 Comments</span>
+                <div class="comment-switch" id="commentSwitch" onclick="event.stopPropagation(); toggleCommenting();">
+                    <div class="comment-switch-handle"></div>
+                </div>
+            </div>
+            <div class="tools-dropdown-item" onclick="event.stopPropagation();">
+                <span class="item-label">🌙 Dark Mode</span>
+                <div class="mode-switch" id="modeSwitch" onclick="event.stopPropagation(); toggleDarkMode();">
+                    <div class="mode-switch-handle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Floating Timer -->
-    <button class="timer-toggle-btn" id="timerToggleBtn" onclick="toggleTimer()">⏱️ Timer</button>
     
     <div class="floating-timer hidden" id="floatingTimer">
         <div class="timer-header">
             <div class="timer-title">⏱️ Timer</div>
-            <button class="timer-close" onclick="hideTimer()">×</button>
+            <div class="timer-header-actions">
+                <button class="timer-minimize" onclick="minimizeTimer()">−</button>
+                <button class="timer-close" onclick="hideTimer()">×</button>
+            </div>
         </div>
         <div class="timer-display" id="timerDisplay">00:00:00</div>
         <div class="timer-controls">
@@ -3082,6 +4945,12 @@
             <span style="color: #666666;">:</span>
             <input type="number" class="timer-input" id="secondsInput" placeholder="SS" min="0" max="59" value="0">
         </div>
+    </div>
+
+    <!-- Minimized Timer -->
+    <div class="minimized-timer hidden" id="minimizedTimer" onclick="restoreTimer()">
+        <span class="minimized-timer-icon">⏱️</span>
+        <span class="minimized-timer-display" id="minimizedTimerDisplay">00:00:00</span>
     </div>
 
     <!-- Banner Settings Modal -->
@@ -3134,14 +5003,6 @@
 
     <!-- Main Application -->
     <div id="mainApp" style="display: none;">
-        <!-- Commenting Toggle -->
-        <div class="commenting-toggle">
-            <label>Comments</label>
-            <div class="comment-switch" id="commentSwitch" onclick="toggleCommenting()">
-                <div class="comment-switch-handle"></div>
-            </div>
-        </div>
-
         <div class="container">
             <!-- Header -->
             <div class="header">
@@ -3164,6 +5025,7 @@
             <!-- Navigation -->
             <div class="nav-tabs">
                 <div class="nav-tab" onclick="showSection('research')">🔍 Research</div>
+        <div class="nav-tab" onclick="showSection('vrr')">🖼️ Visual Repository</div>
                 <div class="nav-tab active" onclick="showSection('snowflake')">Snowflake Method</div>
                 <div class="nav-tab" onclick="showSection('grid')">Story Grid</div>
             </div>
@@ -3175,8 +5037,7 @@
                         <span class="search-icon">🔍</span>
                         <input type="text" class="search-input" placeholder="Search research topics, keywords, or sources..." id="researchSearch">
                         <button onclick="performResearchSearch()" style="background: #000000; border: none; border-radius: 8px; padding: 12px 24px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; white-space: nowrap;" onmouseover="this.style.background='linear-gradient(135deg, #000000, #000000)';" onmouseout="this.style.background='#000000';">Search</button>
-                        <div class="action-buttons">
-                        </div>
+                        
                     </div>
 
                     <div class="filter-section">
@@ -3191,37 +5052,51 @@
                             <div class="filter-tag" data-tag="folklore">folklore</div>
                             <div class="filter-tag" data-tag="myths">myths</div>
                             <div class="filter-tag" data-tag="relationships">relationships</div>
-                            <input type="text" id="customTagInput" placeholder="Add custom tag..." style="padding: 6px 12px; background: rgba(0, 0, 0, 0.05); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 20px; color: #fff; font-size: 13px; width: 150px;">
-                            <button onclick="addCustomTag()" style="padding: 6px 14px; background: rgba(0, 0, 0, 0.15); border: 1px solid #000000; border-radius: 20px; color: #000000; font-size: 13px; cursor: pointer;">+ Add Tag</button>
+                            <input type="text" id="customTagInput" placeholder="Add custom tag..." style="padding: 6px 12px; background: rgba(0, 0, 0, 0.05); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 20px; color: #fff; font-size: 13px; width: 150px;" onfocus="highlightAddTagButton()" onblur="resetAddTagButton()" oninput="highlightAddTagButton()">
+                            <button id="addTagButton" onclick="addCustomTag()" style="padding: 6px 14px; background: rgba(0, 0, 0, 0.15); border: 1px solid #000000; border-radius: 20px; color: #000000; font-size: 13px; cursor: pointer; transition: all 0.3s ease;">+ Add Tag</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="research-categories">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; margin-top: 20px;">
                         <h2 class="categories-title" style="margin-bottom: 0;">Research Categories</h2>
-                        <button class="btn btn-success" onclick="addNewCategory()" style="font-size: 14px;">
-                            <span>+</span> Add Category
-                        </button>
+                        <div style="display: flex; gap: 10px;">
+                            <!-- More Tools Dropdown -->
+                            <div class="dropdown" style="position: relative; display: inline-block;">
+                                <button class="btn btn-secondary dropdown-toggle" onclick="toggleDropdown(this.closest('.dropdown'))" style="font-size: 14px;">
+                                    ⚙️ More Tools ▼
+                                </button>
+                                <div class="dropdown-content" style="right: 0;">
+                                    <button class="dropdown-item" onclick="saveResearchProgress(); toggleDropdown(this.closest('.dropdown'))">
+                                        💾 Save Progress
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Add Category Button -->
+                            <button class="btn btn-primary" onclick="addNewCategory()" style="font-size: 14px;">
+                                <span>+</span> Add Category
+                            </button>
+                        </div>
                     </div>
                     <div class="categories-grid" id="categoriesGrid">
                         <div class="category-card" onclick="filterByCategory('Worldbuilding')">
                             <div class="category-icon worldbuilding">🌍</div>
                             <div class="category-name">Worldbuilding</div>
                             <div class="category-description">Locations, cultures, politics</div>
-                            <div class="category-count" id="worldbuildingCount">0 notes</div>
+                            <div class="category-count" id="worldbuildingCount" onclick="event.stopPropagation(); viewCategoryNotes('Worldbuilding');" style="cursor: pointer; text-decoration: underline;">0 notes</div>
                         </div>
                         <div class="category-card" onclick="filterByCategory('History')">
                             <div class="category-icon history">📚</div>
                             <div class="category-name">History</div>
                             <div class="category-description">Historical events, timelines</div>
-                            <div class="category-count" id="historyCount">0 notes</div>
+                            <div class="category-count" id="historyCount" onclick="event.stopPropagation(); viewCategoryNotes('History');" style="cursor: pointer; text-decoration: underline;">0 notes</div>
                         </div>
                         <div class="category-card" onclick="filterByCategory('Science')">
                             <div class="category-icon science">🔬</div>
                             <div class="category-name">Science</div>
                             <div class="category-description">Technology, physics, biology</div>
-                            <div class="category-count" id="scienceCount">0 notes</div>
+                            <div class="category-count" id="scienceCount" onclick="event.stopPropagation(); viewCategoryNotes('Science');" style="cursor: pointer; text-decoration: underline;">0 notes</div>
                         </div>
                         <div class="category-card" onclick="filterByCategory('Mythology')">
                             <div class="category-icon mythology">✨</div>
@@ -3269,7 +5144,18 @@
                         </div>
                         
                         <label style="display: block; color: #555555; font-size: 14px; margin-bottom: 8px; font-weight: 500;">Tags</label>
-                        <input type="text" id="newNoteTags" placeholder="Enter tags (comma-separated)" style="width: 100%; padding: 15px; margin-bottom: 20px; background: rgba(255,255,255,0.05); border: 2px solid rgba(0, 0, 0, 0.3); border-radius: 12px; color: #000000; font-size: 16px;">
+                        <div style="position: relative; margin-bottom: 20px;">
+                            <div id="tagsDropdownContainer" class="custom-tags-dropdown">
+                                <div id="tagsDropdownButton" class="tags-dropdown-button" onclick="toggleTagsDropdown()">
+                                    <span id="selectedTagsDisplay">Select tags...</span>
+                                    <span class="dropdown-arrow">▼</span>
+                                </div>
+                                <div id="tagsDropdownMenu" class="tags-dropdown-menu" style="display: none;">
+                                    <!-- Tag checkboxes will be populated here -->
+                                </div>
+                            </div>
+                            <input type="hidden" id="newNoteTags" value="">
+                        </div>
                         
                         <label style="display: block; color: #555555; font-size: 14px; margin-bottom: 8px; font-weight: 500;">Source URL <span style="color: #888888; font-weight: normal;">(optional)</span></label>
                         <input type="text" id="newNoteSource" placeholder="Enter source URL" style="width: 100%; padding: 15px; margin-bottom: 20px; background: rgba(255,255,255,0.05); border: 2px solid rgba(0, 0, 0, 0.3); border-radius: 12px; color: #000000; font-size: 16px;">
@@ -3331,15 +5217,15 @@
                     <div class="grid-controls">
                         <div class="control-group">
                             <button class="btn btn-success" onclick="addRow()">+ Add Row</button>
-                            <button class="btn" onclick="addColumn()" style="background: white; color: #000000; border: 2px solid transparent; background-image: linear-gradient(white, white), linear-gradient(135deg, #c1ff00, #ffeb00, #ffa500, #ff6b00); background-origin: border-box; background-clip: padding-box, border-box; margin-left: 10px; font-weight: 600;">+ Add Column</button>
+                            <button class="btn btn-secondary" onclick="addColumn()" style="margin-left: 10px;">+ Add Column</button>
                         </div>
                         <div class="control-group">
-                            <div class="dropdown" id="toolsDropdown">
-                                <button class="btn btn-secondary" onclick="toggleDropdown('toolsDropdown')">Tools ▼</button>
+                            <div class="dropdown" id="gridToolsDropdown">
+                                <button class="btn btn-secondary" onclick="toggleDropdown('gridToolsDropdown')">More Tools ▼</button>
                                 <div class="dropdown-content">
                                     <div class="dropdown-item" onclick="saveGrid()">💾 Save Grid</div>
                                     <div class="dropdown-item" onclick="loadGrid()">📁 Load Grid</div>
-                                    <div class="dropdown-item" onclick="exportCSV()">📤 Export CSV</div>
+                                    <div class="dropdown-item" onclick="exportToExcel()">📄 Export Excel</div>
                                     <div class="dropdown-item" onclick="importCSV()">📥 Import CSV</div>
                                     <div class="dropdown-item" onclick="openColumnManager()">⚙️ Manage Columns</div>
                                     <div class="dropdown-item" onclick="resetGrid()">🔄 Reset Grid</div>
@@ -3355,7 +5241,7 @@
                             <span id="gridProgressText" style="color: #000000; font-weight: 600;">0%</span>
                         </div>
                         <div style="width: 100%; height: 8px; background: rgba(0, 0, 0, 0.1); border-radius: 4px; overflow: hidden;">
-                            <div id="gridProgressBar" style="height: 100%; background: linear-gradient(90deg, #c1ff00, #ffeb00, #ffa500, #ff6b00); width: 0%; transition: width 0.3s ease;"></div>
+                            <div id="gridProgressBar" style="height: 100%; background: linear-gradient(90deg, #4c51bf, #5b21b6, #6366f1); width: 0%; transition: width 0.3s ease;"></div>
                         </div>
                         <div style="margin-top: 8px; display: flex; justify-content: space-between; color: #666666; font-size: 12px;">
                             <span id="gridCellsCompleted">0 cells filled</span>
@@ -3396,7 +5282,126 @@
                 </div>
             </div>
 
-            <!-- Snowflake Method Section (Keep existing) -->
+            
+            <!-- Visual Research Repository Section -->
+            <div id="vrrSection" class="content-section" style="display: none;">
+                <div class="vrr-container">
+                    <!-- Sidebar - Taxonomy Panel -->
+                    <aside class="vrr-sidebar" id="vrrSidebar">
+                        <button class="vrr-sidebar-toggle" onclick="toggleVRRSidebar()">☰</button>
+                        
+                        <div class="vrr-sidebar-content" style="padding-top: 40px;">
+                            <!-- Folders Section -->
+                            <div class="vrr-sidebar-section">
+                                <div class="vrr-sidebar-title">Folders</div>
+                                <ul class="vrr-folder-tree" id="vrrFolderTree">
+                                    <li class="vrr-folder-item active" data-folder-id="all" onclick="filterByFolder('all')">
+                                        <span class="vrr-folder-icon">📁</span>
+                                        <span class="vrr-folder-name">All Images</span>
+                                        <span class="vrr-folder-count" id="folderCountAll">0</span>
+                                    </li>
+                                </ul>
+                                <button class="vrr-btn vrr-btn-secondary" style="width: calc(100% - 32px); margin: 12px 16px 0 16px; padding: 8px;" onclick="createFolder()">+ New Folder</button>
+                            </div>
+                            
+
+                        </div>
+                    </aside>
+                    
+                    <!-- Gallery Area -->
+                    <main class="vrr-gallery-area">
+                        <div class="vrr-gallery-header">
+                            <div class="vrr-gallery-stats" id="vrrGalleryStats">
+                                0 images
+                            </div>
+                            <div class="vrr-gallery-actions">
+                                <button class="vrr-btn vrr-btn-primary" onclick="document.getElementById('vrrFileInput').click()">
+                                    📤 Upload Images
+                                </button>
+                                <button class="vrr-btn vrr-btn-secondary" onclick="exportVRRData()" style="margin-left: 12px;">
+                                    📄 Export as Word
+                                </button>
+                                <input type="file" id="vrrFileInput" accept="image/*" multiple style="display: none;" onchange="handleFileInputUpload(event)">
+                            </div>
+                        </div>
+                        
+                        <!-- Masonry Grid -->
+                        <div class="vrr-masonry" id="vrrMasonry">
+                            <!-- Images will be populated dynamically -->
+                        </div>
+                        
+                        <!-- Empty State -->
+                        <div class="vrr-empty-state" id="vrrEmptyState">
+                            <div class="vrr-empty-icon">🖼️</div>
+                            <div class="vrr-empty-title">No images yet</div>
+                            <div class="vrr-empty-text">Drag and drop images anywhere or click Upload Images to get started</div>
+                        </div>
+                    </main>
+                    
+                    <!-- Global Drop Zone Overlay -->
+                    <div class="vrr-drop-overlay" id="vrrDropOverlay">
+                        <div class="vrr-drop-message">
+                            <div class="vrr-drop-icon">📥</div>
+                            <div class="vrr-drop-text">Drop images to upload</div>
+                            <div class="vrr-drop-subtext">Multiple images supported</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Upload Progress Indicator -->
+                <div class="vrr-upload-progress" id="vrrUploadProgress" style="display: none;">
+                    <div class="vrr-upload-header">
+                        <div class="vrr-upload-title">Uploading images...</div>
+                        <button class="vrr-upload-close" onclick="closeUploadProgress()">×</button>
+                    </div>
+                    <div id="vrrUploadList">
+                        <!-- Upload items will be populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Image Detail Modal -->
+                <div class="vrr-modal" id="vrrModal">
+                    <div class="vrr-modal-content">
+                        <div class="vrr-modal-image-container">
+                            <img class="vrr-modal-image" id="vrrModalDetailImage" src="" alt="">
+                            <button class="vrr-modal-close" onclick="closeImageModal()">×</button>
+                        </div>
+                        <div class="vrr-modal-metadata">
+                            <h3 class="vrr-modal-title">Image Details</h3>
+                            
+                            <div class="vrr-form-group">
+                                <label class="vrr-form-label">Title</label>
+                                <input type="text" class="vrr-input" id="vrrModalTitle" placeholder="Enter image title">
+                            </div>
+                            
+                            <div class="vrr-form-group">
+                                <label class="vrr-form-label">Description</label>
+                                <textarea class="vrr-textarea" id="vrrModalDescription" placeholder="Enter detailed description"></textarea>
+                            </div>
+                            
+                            <div class="vrr-form-group">
+                                <label class="vrr-form-label">Source URL</label>
+                                <input type="url" class="vrr-input" id="vrrModalSource" placeholder="https://example.com">
+                            </div>
+                            
+
+                            <div class="vrr-form-group">
+                                <label class="vrr-form-label">Folder</label>
+                                <select class="vrr-select" id="vrrModalFolder">
+                                    <option value="all">All Images</option>
+                                </select>
+                            </div>
+                            
+                            <div class="vrr-modal-actions">
+                                <button class="vrr-btn vrr-btn-primary" onclick="saveImageMetadata()">Save Changes</button>
+                                <button class="vrr-btn vrr-btn-danger" onclick="deleteImage()">Delete Image</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Snowflake Method Section (Keep existing) -->
             <div id="snowflakeSection" class="content-section active">
                 <div class="snowflake-section">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
@@ -3411,7 +5416,7 @@
                             <span id="snowflakeProgressText" style="color: #000000; font-weight: 600;">0%</span>
                         </div>
                         <div style="width: 100%; height: 8px; background: rgba(0, 0, 0, 0.1); border-radius: 4px; overflow: hidden;">
-                            <div id="snowflakeProgressBar" style="height: 100%; background: linear-gradient(90deg, #c1ff00, #ffeb00, #ffa500, #ff6b00); width: 0%; transition: width 0.3s ease;"></div>
+                            <div id="snowflakeProgressBar" style="height: 100%; background: linear-gradient(90deg, #4c51bf, #5b21b6, #6366f1); width: 0%; transition: width 0.3s ease;"></div>
                         </div>
                         <div style="margin-top: 8px; color: #666666; font-size: 12px;" id="snowflakeStepsCompleted">0 of 9 steps completed</div>
                     </div>
@@ -3614,35 +5619,15 @@
 
                     <!-- Major Plot Points -->
                     <div id="plotpoints" class="snowflake-content">
-                        <h3>Major Plot Points</h3>
-                        <p>Define the key turning points and beats in your story.</p>
-                        <div class="form-group">
-                            <label>Opening Hook:</label>
-                            <textarea id="openingHook" placeholder="How does your story grab the reader's attention?" onchange="saveData()"></textarea>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <div>
+                                <h3>Major Plot Points</h3>
+                                <p>Define the key turning points and beats in your story.</p>
+                            </div>
+                            <button class="btn btn-success" onclick="addPlotPointSection()" style="font-size: 14px;">+ Add Section</button>
                         </div>
-                        <div class="form-group">
-                            <label>Inciting Incident:</label>
-                            <textarea id="incitingIncident" placeholder="What event sets your story in motion?" onchange="saveData()"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>First Plot Point:</label>
-                            <textarea id="firstPlotPoint" placeholder="What launches your protagonist into the main story?" onchange="saveData()"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Midpoint:</label>
-                            <textarea id="midpoint" placeholder="What major revelation or twist occurs at the story's center?" onchange="saveData()"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Second Plot Point:</label>
-                            <textarea id="secondPlotPoint" placeholder="What pushes your protagonist toward the final confrontation?" onchange="saveData()"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Climax:</label>
-                            <textarea id="climax" placeholder="What is the final confrontation or resolution?" onchange="saveData()"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Resolution:</label>
-                            <textarea id="resolution" placeholder="How does your story conclude and what's the new normal?" onchange="saveData()"></textarea>
+                        <div id="plotPointsContainer">
+                            <!-- Plot point sections will be rendered here -->
                         </div>
                     </div>
 
@@ -3654,7 +5639,7 @@
 
                     <!-- Export buttons for Snowflake Method -->
                     <div class="snowflake-export">
-                        <button class="export-btn" onclick="exportSnowflakeData()">📤 Export Snowflake Data</button>
+                        <button class="export-btn" onclick="exportSnowflakeData()">📄 Export as Word</button>
                         <button class="export-btn" onclick="saveSnowflakeProgress()">💾 Save Progress</button>
                     </div>
                 </div>
@@ -3735,6 +5720,8 @@
         let chapters = [];
         let chapterPanelVisible = true;
         let gridData = [];
+        let plotPointSections = [];
+        let draggedPlotPointIndex = null;
         let actNumbers = [];
 
         // Timer state
@@ -3791,7 +5778,7 @@
             generateSceneList();
             generateChapterList();
             updateSnowflakeNavigation();
-            startAutoSave();
+            // Note: Auto-save is set up in DOMContentLoaded via setupAutoSave()
         }
 
         // Passkey functionality
@@ -3800,6 +5787,11 @@
             if (passkey === 'STORYTELLER311') {
                 document.getElementById('passkeyModal').style.display = 'none';
                 document.getElementById('mainApp').style.display = 'block';
+                // Change timer button text to black after login
+                const timerBtn = document.getElementById('timerToggleBtn');
+                if (timerBtn) {
+                    timerBtn.style.color = '#000000';
+                }
                 init();
             } else {
                 alert('Incorrect passkey. Please try again.');
@@ -3820,11 +5812,34 @@
         function showSection(section) {
             // Update nav tabs
             document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
-            event.target.classList.add('active');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            } else {
+                // Fallback: find and activate the correct tab
+                document.querySelectorAll('.nav-tab').forEach(tab => {
+                    if (tab.onclick && tab.onclick.toString().includes(section)) {
+                        tab.classList.add('active');
+                    }
+                });
+            }
 
-            // Update content sections
-            document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
-            document.getElementById(section + 'Section').classList.add('active');
+            // Update content sections - hide all first
+            document.querySelectorAll('.content-section').forEach(s => {
+                s.classList.remove('active');
+                s.style.display = 'none';
+            });
+            
+            // Show the requested section
+            const targetSection = document.getElementById(section + 'Section');
+            if (targetSection) {
+                targetSection.classList.add('active');
+                targetSection.style.display = 'block';
+                
+                // Initialize VRR if switching to it
+                if (section === 'vrr' && typeof initVRR === 'function') {
+                    initVRR();
+                }
+            }
 
             currentSection = section;
         }
@@ -4086,13 +6101,17 @@
         }
 
         // Dropdown functionality
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
+        function toggleDropdown(dropdownElement) {
+            // Check if the argument is an element or an ID
+            const dropdown = typeof dropdownElement === 'string' ? document.getElementById(dropdownElement) : dropdownElement;
+
+            if (!dropdown) return;
+
             dropdown.classList.toggle('active');
             
             // Close other dropdowns
             document.querySelectorAll('.dropdown').forEach(d => {
-                if (d.id !== dropdownId) {
+                if (d !== dropdown) {
                     d.classList.remove('active');
                 }
             });
@@ -4107,6 +6126,239 @@
             }
         });
 
+
+// Export Research Notes as Word Document
+function exportResearchNotes() {
+    const notes = JSON.parse(localStorage.getItem('researchNotes') || '[]');
+    
+    if (notes.length === 0) {
+        alert('No research notes to export!');
+        return;
+    }
+    
+    // Create markdown content
+    let markdown = `# Research Notes Export\n\n`;
+    markdown += `**Generated:** ${new Date().toLocaleString()}\n\n`;
+    markdown += `**Total Notes:** ${notes.length}\n\n---\n\n`;
+    
+    // Group by category
+    const categories = {};
+    notes.forEach(note => {
+        const cat = note.category || 'Uncategorized';
+        if (!categories[cat]) categories[cat] = [];
+        categories[cat].push(note);
+    });
+    
+    // Write each category
+    for (const [category, categoryNotes] of Object.entries(categories)) {
+        markdown += `## ${category}\n\n`;
+        
+        categoryNotes.forEach(note => {
+            markdown += `### ${note.title}\n\n`;
+            markdown += `${note.description}\n\n`;
+            
+            if (note.tags && note.tags.length > 0) {
+                markdown += `**Tags:** ${note.tags.join(', ')}\n\n`;
+            }
+            
+            if (note.sources && note.sources.length > 0) {
+                markdown += `**Sources:**\n`;
+                note.sources.forEach(src => {
+                    markdown += `- ${src}\n`;
+                });
+                markdown += `\n`;
+            }
+            
+            markdown += `---\n\n`;
+        });
+    }
+    
+    // Download as markdown file
+    const blob = new Blob([markdown], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `research-notes-${Date.now()}.md`;
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+// Export Current Note as Word Document
+function exportCurrentNoteAsWord() {
+    // Get current note data from the modal
+    const title = document.getElementById('noteTitle').value;
+    const description = document.getElementById('noteDescription').value;
+    const category = document.getElementById('noteCategory').value;
+    
+    // Get tags
+    const tagElements = document.querySelectorAll('#noteTagsContainer .note-tag');
+    const tags = Array.from(tagElements).map(tag => tag.textContent.replace('×', '').trim());
+    
+    // Get source links
+    const sourceInputs = document.querySelectorAll('#sourceLinksContainer input');
+    const sources = Array.from(sourceInputs)
+        .map(input => input.value.trim())
+        .filter(src => src !== '');
+    
+    if (!title) {
+        alert('Please enter a note title before exporting!');
+        return;
+    }
+    
+    // Create markdown content for single note
+    let markdown = `# ${title}\n\n`;
+    markdown += `**Category:** ${category || 'Uncategorized'}\n\n`;
+    markdown += `**Generated:** ${new Date().toLocaleString()}\n\n`;
+    markdown += `---\n\n`;
+    
+    if (description) {
+        markdown += `## Description\n\n`;
+        markdown += `${description}\n\n`;
+    }
+    
+    if (tags.length > 0) {
+        markdown += `## Tags\n\n`;
+        markdown += `${tags.join(', ')}\n\n`;
+    }
+    
+    if (sources.length > 0) {
+        markdown += `## Sources\n\n`;
+        sources.forEach(src => {
+            markdown += `- ${src}\n`;
+        });
+        markdown += `\n`;
+    }
+    
+    // Download as markdown file
+    const blob = new Blob([markdown], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    const fileName = title.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    a.download = `${fileName}-${Date.now()}.md`;
+    a.click();
+    URL.revokeObjectURL(url);
+    
+    alert('Note exported successfully!');
+}
+
+// Export VRR Data as Word Document
+function exportVRRData() {
+    const images = VRRStore.images;
+    
+    if (images.length === 0) {
+        alert('No images to export!');
+        return;
+    }
+    
+    // Create markdown content
+    let markdown = `# Visual Research Repository Export\n\n`;
+    markdown += `**Generated:** ${new Date().toLocaleString()}\n\n`;
+    markdown += `**Total Images:** ${images.length}\n\n---\n\n`;
+    
+    images.forEach((img, index) => {
+        markdown += `## ${img.title || `Image ${index + 1}`}\n\n`;
+        
+        if (img.description) {
+            markdown += `${img.description}\n\n`;
+        }
+        
+        if (img.tags && img.tags.length > 0) {
+            markdown += `**Tags:** ${img.tags.join(', ')}\n\n`;
+        }
+        
+        if (img.folder) {
+            markdown += `**Folder:** ${img.folder}\n\n`;
+        }
+        
+        if (img.source_url) {
+            markdown += `**Source:** ${img.source_url}\n\n`;
+        }
+        
+        markdown += `![${img.title}](${img.url})\n\n`;
+        markdown += `---\n\n`;
+    });
+    
+    // Download as markdown file
+    const blob = new Blob([markdown], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `visual-repository-${Date.now()}.md`;
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+// Export Snowflake Data as Word Document
+function exportSnowflakeData() {
+    const data = JSON.parse(localStorage.getItem('snowflakeData') || '{}');
+    
+    // Create markdown content
+    let markdown = `# Snowflake Method Export\n\n`;
+    markdown += `**Generated:** ${new Date().toLocaleString()}\n\n---\n\n`;
+    
+    // Step 1
+    if (data.step1) {
+        markdown += `## Step 1: One-Sentence Summary\n\n`;
+        markdown += `${data.step1}\n\n---\n\n`;
+    }
+    
+    // Step 2
+    if (data.step2) {
+        markdown += `## Step 2: One-Paragraph Summary\n\n`;
+        if (data.step2.setup) markdown += `**Setup:** ${data.step2.setup}\n\n`;
+        if (data.step2.disaster1) markdown += `**First Disaster:** ${data.step2.disaster1}\n\n`;
+        if (data.step2.disaster2) markdown += `**Second Disaster:** ${data.step2.disaster2}\n\n`;
+        if (data.step2.disaster3) markdown += `**Third Disaster:** ${data.step2.disaster3}\n\n`;
+        if (data.step2.ending) markdown += `**Ending:** ${data.step2.ending}\n\n`;
+        markdown += `---\n\n`;
+    }
+    
+    // Characters
+    if (data.characters && data.characters.length > 0) {
+        markdown += `## Characters\n\n`;
+        data.characters.forEach(char => {
+            markdown += `### ${char.name}\n\n`;
+            if (char.role) markdown += `**Role:** ${char.role}\n\n`;
+            if (char.goal) markdown += `**Goal:** ${char.goal}\n\n`;
+            if (char.conflict) markdown += `**Conflict:** ${char.conflict}\n\n`;
+            if (char.epiphany) markdown += `**Epiphany:** ${char.epiphany}\n\n`;
+            if (char.summary) markdown += `**Summary:** ${char.summary}\n\n`;
+            markdown += `---\n\n`;
+        });
+    }
+    
+    // Download as markdown file
+    const blob = new Blob([markdown], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.download = `snowflake-method-${Date.now()}.md`;
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+// Export Story Grid as Excel (using SheetJS library)
+function exportToExcel() {
+    if (typeof XLSX === 'undefined') {
+        // Fallback to CSV if SheetJS not loaded
+        exportCSV();
+        return;
+    }
+    
+    const data = gridData.map(row => {
+        const rowData = {};
+        columns.forEach((col, index) => {
+            rowData[col] = row[index] || '';
+        });
+        return rowData;
+    });
+    
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Story Grid");
+    
+    XLSX.writeFile(wb, `story-grid-${Date.now()}.xlsx`);
+}
         // CSV Export/Import
         function exportCSV() {
             const headers = ['Actions', 'Act', ...gridColumns];
@@ -4938,7 +7190,12 @@
 
         function saveSnowflakeProgress() {
             saveData();
-            showSaveIndicator();
+            showSaveIndicator('Progress Saved Successfully!');
+        }
+        
+        function saveResearchProgress() {
+            saveData();
+            showSaveIndicator('Research Saved Successfully!');
         }
 
         // Data persistence
@@ -4973,13 +7230,18 @@
                     climax: document.getElementById('climax')?.value || '',
                     resolution: document.getElementById('resolution')?.value || ''
                 },
+                plotPointSections: plotPointSections,
                 researchNotes: researchNotes,
                 customTags: customTags,
-                customCategories: customCategories
+                customCategories: customCategories,
+                timerSeconds: timerSeconds,
+                timerRunning: timerRunning,
+                currentSection: currentSection,
+                currentSnowflakeStep: currentSnowflakeStep
             };
             
             try {
-                localStorage.setItem('scribr_data', JSON.stringify(data));
+                localStorage.setItem('storyGridsData', JSON.stringify(data));
                 updateSnowflakeProgress();
                 updateGridProgress();
             } catch (e) {
@@ -5029,6 +7291,12 @@
                         }, 100);
                     }
                     
+                    // Load plot point sections
+                    if (data.plotPointSections && data.plotPointSections.length > 0) {
+                        plotPointSections = data.plotPointSections;
+                        renderPlotPoints();
+                    }
+                    
                     // Load research notes
                     if (data.researchNotes) {
                         researchNotes = data.researchNotes;
@@ -5076,8 +7344,43 @@
                             });
                         }
                     }
+                    
+                    // Load timer state
+                    if (data.timerSeconds !== undefined) {
+                        timerSeconds = data.timerSeconds;
+                        updateTimerDisplay();
+                    }
+                    if (data.timerRunning && data.timerSeconds > 0) {
+                        // Don't auto-restart timer, just restore the time
+                        timerRunning = false;
+                    }
+                    
+                    // Load current section and snowflake step
+                    if (data.currentSection) {
+                        currentSection = data.currentSection;
+                        setTimeout(() => {
+                            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+                            document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+                            
+                            const activeTab = Array.from(document.querySelectorAll('.nav-tab')).find(tab => 
+                                tab.textContent.toLowerCase().includes(currentSection)
+                            );
+                            if (activeTab) activeTab.classList.add('active');
+                            
+                            const activeSection = document.getElementById(currentSection + 'Section');
+                            if (activeSection) activeSection.classList.add('active');
+                        }, 100);
+                    }
+                    
+                    if (data.currentSnowflakeStep) {
+                        currentSnowflakeStep = data.currentSnowflakeStep;
+                        setTimeout(() => {
+                            updateSnowflakeNavigation();
+                        }, 150);
+                    }
                 } catch (e) {
                     console.error("Error parsing data from localStorage:", e);
+                    // Clear corrupted data
                     localStorage.removeItem('storyGridsData');
                 }
             }
@@ -5801,6 +8104,7 @@
         // Initialize when page loads
         document.addEventListener('DOMContentLoaded', function() {
             initDefaultSynopsisSections();
+            initializePlotPoints();
             loadData();
             
             // Add 10 default rows if grid is empty
@@ -5814,7 +8118,7 @@
             generateGrid();
             generateCharacterSynopses(); // Generate character synopses
             initializeSnowflake();
-            startAutoSave();
+            // Note: Auto-save is set up in the main DOMContentLoaded listener via setupAutoSave()
             
             // Auto-adjust all header widths on load
             setTimeout(() => {
@@ -6438,23 +8742,76 @@
             }
         };
 
+        // Tools dropdown toggle
+        function toggleToolsDropdown() {
+            const dropdown = document.getElementById('toolsDropdown');
+            dropdown.classList.toggle('active');
+        }
+        
+        // Dark mode toggle
+        function toggleDarkMode() {
+            const body = document.body;
+            const modeSwitch = document.getElementById('modeSwitch');
+            
+            body.classList.toggle('dark-mode');
+            modeSwitch.classList.toggle('active');
+            
+            // Save dark mode preference
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+        }
+        
+        // Load dark mode preference on page load
+        function loadDarkModePreference() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'true') {
+                document.body.classList.add('dark-mode');
+                const modeSwitch = document.getElementById('modeSwitch');
+                if (modeSwitch) {
+                    modeSwitch.classList.add('active');
+                }
+            }
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('toolsDropdown');
+            if (dropdown && !dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
         // Timer functions
         function toggleTimer() {
             const timer = document.getElementById('floatingTimer');
-            const toggleBtn = document.getElementById('timerToggleBtn');
+            const dropdown = document.getElementById('toolsDropdown');
             
             if (timer.classList.contains('hidden')) {
                 timer.classList.remove('hidden');
-                toggleBtn.classList.add('hidden');
+                dropdown.classList.remove('active');
             }
         }
 
         function hideTimer() {
             const timer = document.getElementById('floatingTimer');
-            const toggleBtn = document.getElementById('timerToggleBtn');
-            
+            const minimizedTimer = document.getElementById('minimizedTimer');
             timer.classList.add('hidden');
-            toggleBtn.classList.remove('hidden');
+            minimizedTimer.classList.add('hidden');
+        }
+
+        function minimizeTimer() {
+            const timer = document.getElementById('floatingTimer');
+            const minimizedTimer = document.getElementById('minimizedTimer');
+            timer.classList.add('hidden');
+            minimizedTimer.classList.remove('hidden');
+            updateMinimizedTimerDisplay();
+        }
+
+        function restoreTimer() {
+            const timer = document.getElementById('floatingTimer');
+            const minimizedTimer = document.getElementById('minimizedTimer');
+            minimizedTimer.classList.add('hidden');
+            timer.classList.remove('hidden');
         }
 
         function startTimer() {
@@ -6514,6 +8871,21 @@
             ].join(':');
             
             document.getElementById('timerDisplay').textContent = display;
+            updateMinimizedTimerDisplay();
+        }
+
+        function updateMinimizedTimerDisplay() {
+            const hours = Math.floor(timerSeconds / 3600);
+            const minutes = Math.floor((timerSeconds % 3600) / 60);
+            const seconds = timerSeconds % 60;
+            
+            const display = [
+                hours.toString().padStart(2, '0'),
+                minutes.toString().padStart(2, '0'),
+                seconds.toString().padStart(2, '0')
+            ].join(':');
+            
+            document.getElementById('minimizedTimerDisplay').textContent = display;
         }
 
         function playTimerSound() {
@@ -6649,6 +9021,110 @@
         // Research functions
         let customTags = [];
         
+        // Function to get all available tags from the filter tags
+        function getAllAvailableTags() {
+            const tags = [];
+            const filterTags = document.querySelectorAll('.filter-tag');
+            filterTags.forEach(tag => {
+                const tagName = tag.dataset.tag;
+                if (tagName && tagName !== 'all') {
+                    tags.push(tagName);
+                }
+            });
+            return tags;
+        }
+        
+        // Function to populate the tags dropdown
+        function populateTagsDropdown() {
+            const dropdownMenu = document.getElementById('tagsDropdownMenu');
+            const hiddenInput = document.getElementById('newNoteTags');
+            if (!dropdownMenu) return;
+            
+            const allTags = getAllAvailableTags();
+            const currentSelectedTags = hiddenInput.value ? hiddenInput.value.split(',') : [];
+            
+            // Clear existing checkboxes
+            dropdownMenu.innerHTML = '';
+            
+            // Add all tags as checkboxes
+            allTags.forEach(tag => {
+                const item = document.createElement('div');
+                item.className = 'tag-checkbox-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `tag-${tag}`;
+                checkbox.value = tag;
+                checkbox.checked = currentSelectedTags.includes(tag);
+                checkbox.onchange = updateSelectedTags;
+                
+                const label = document.createElement('label');
+                label.htmlFor = `tag-${tag}`;
+                label.textContent = tag;
+                
+                item.appendChild(checkbox);
+                item.appendChild(label);
+                dropdownMenu.appendChild(item);
+            });
+            
+            updateSelectedTagsDisplay();
+        }
+        
+        // Toggle dropdown visibility
+        function toggleTagsDropdown() {
+            const menu = document.getElementById('tagsDropdownMenu');
+            const button = document.getElementById('tagsDropdownButton');
+            
+            if (menu.style.display === 'none') {
+                menu.style.display = 'block';
+                button.classList.add('active');
+            } else {
+                menu.style.display = 'none';
+                button.classList.remove('active');
+            }
+        }
+        
+        // Update selected tags when checkboxes change
+        function updateSelectedTags() {
+            const checkboxes = document.querySelectorAll('#tagsDropdownMenu input[type="checkbox"]');
+            const selectedTags = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+            
+            document.getElementById('newNoteTags').value = selectedTags.join(',');
+            updateSelectedTagsDisplay();
+        }
+        
+        // Update the display text showing selected tags
+        function updateSelectedTagsDisplay() {
+            const hiddenInput = document.getElementById('newNoteTags');
+            const display = document.getElementById('selectedTagsDisplay');
+            
+            if (!hiddenInput || !display) return;
+            
+            const selectedTags = hiddenInput.value ? hiddenInput.value.split(',') : [];
+            
+            if (selectedTags.length === 0) {
+                display.textContent = 'Select tags...';
+            } else if (selectedTags.length === 1) {
+                display.textContent = selectedTags[0];
+            } else {
+                display.textContent = `${selectedTags.length} tags selected`;
+            }
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('tagsDropdownContainer');
+            const menu = document.getElementById('tagsDropdownMenu');
+            const button = document.getElementById('tagsDropdownButton');
+            
+            if (dropdown && !dropdown.contains(event.target)) {
+                if (menu) menu.style.display = 'none';
+                if (button) button.classList.remove('active');
+            }
+        });
+        
         function addCustomTag() {
             const input = document.getElementById('customTagInput');
             const tagName = input.value.trim();
@@ -6688,7 +9164,31 @@
             filterTags.insertBefore(newTag, customInput);
             
             input.value = '';
+            
+            // Refresh the tags dropdown if it's visible
+            populateTagsDropdown();
+            
             saveData();
+        }
+        
+        function highlightAddTagButton() {
+            const button = document.getElementById('addTagButton');
+            const input = document.getElementById('customTagInput');
+            if (button && input && (document.activeElement === input || input.value.trim() !== '')) {
+                button.style.background = 'linear-gradient(135deg, #7c3aed, #a855f7)';
+                button.style.color = '#ffffff';
+                button.style.borderColor = '#7c3aed';
+            }
+        }
+        
+        function resetAddTagButton() {
+            const button = document.getElementById('addTagButton');
+            const input = document.getElementById('customTagInput');
+            if (button && input && input.value.trim() === '') {
+                button.style.background = 'rgba(0, 0, 0, 0.15)';
+                button.style.color = '#000000';
+                button.style.borderColor = '#000000';
+            }
         }
         
         function deleteCustomTag(tagName) {
@@ -6758,55 +9258,43 @@
             const note = researchNotes.find(n => n.id === noteId);
             if (!note) return;
             
+            // Store the note ID we're editing
             currentEditingNoteId = noteId;
-            noteModalImages = note.images || (note.image ? [note.image] : []);
-            noteModalTags = [...note.tags];
+            currentNoteCategory = note.category;
             
-            document.getElementById('noteModalTitle').textContent = 'Edit Note';
-            document.getElementById('noteTitle').value = note.title;
-            document.getElementById('noteDescription').value = note.description;
-            document.getElementById('noteCategory').value = note.category;
-            document.getElementById('saveNoteBtn').textContent = 'Update Note';
+            // Hide category notes viewer if open
+            document.getElementById('categoryNotesViewer').style.display = 'none';
             
-            // Set tags
-            const tagsContainer = document.getElementById('noteTagsContainer');
-            tagsContainer.innerHTML = '';
-            noteModalTags.forEach(tag => {
-                const chip = createTagChip(tag);
-                tagsContainer.appendChild(chip);
-            });
-            const tagInput = document.createElement('input');
-            tagInput.type = 'text';
-            tagInput.className = 'note-tag-input';
-            tagInput.id = 'noteTagInput';
-            tagInput.placeholder = 'Type and press Enter to add tags';
-            tagsContainer.appendChild(tagInput);
-            setupTagInput();
+            // Show note creation section (reuse for editing)
+            document.getElementById('noteCreationSection').style.display = 'block';
+            document.getElementById('noteCreationTitle').textContent = `Edit Note`;
             
-            // Set images
-            const imagePreviews = document.getElementById('imagePreviews');
-            imagePreviews.innerHTML = '';
-            noteModalImages.forEach((img, index) => {
-                const preview = createImagePreview(img, index);
-                imagePreviews.appendChild(preview);
-            });
+            // Populate form fields with existing note data
+            document.getElementById('newNoteTitle').value = note.title;
+            document.getElementById('newNoteDescription').innerHTML = note.description;
+            document.getElementById('newNoteSource').value = note.source || '';
             
-            // Set source links
-            const sources = note.sources || [note.source || ''];
-            const sourceLinksContainer = document.getElementById('sourceLinksContainer');
-            sourceLinksContainer.innerHTML = '';
-            sources.forEach((source, index) => {
-                const linkItem = document.createElement('div');
-                linkItem.className = 'source-link-item';
-                linkItem.innerHTML = `
-                    <input type="text" class="note-form-input" placeholder="https://example.com" data-source-index="${index}" value="${source}">
-                    <button class="source-link-remove" onclick="removeSourceLink(${index})">×</button>
-                `;
-                sourceLinksContainer.appendChild(linkItem);
-            });
-            sourceLinksCount = sources.length;
+            // Set tags in hidden input and populate dropdown
+            const tagsInput = document.getElementById('newNoteTags');
+            if (note.tags && note.tags.length > 0) {
+                tagsInput.value = note.tags.join(',');
+            } else {
+                tagsInput.value = '';
+            }
+            populateTagsDropdown();
             
-            document.getElementById('noteModal').classList.add('active');
+            // Handle image preview if exists
+            const imagePreview = document.getElementById('newNoteImagePreview');
+            if (note.image) {
+                currentNoteImageData = note.image;
+                imagePreview.innerHTML = `<img src="${note.image}" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">`;
+            } else {
+                imagePreview.innerHTML = '';
+                currentNoteImageData = null;
+            }
+            
+            // Scroll to form
+            document.getElementById('noteCreationSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function closeNoteModal() {
@@ -7145,6 +9633,30 @@
             closeCategoryModal();
         }
         
+        function deleteCategory(categoryName) {
+            if (confirm(`Are you sure you want to delete the "${categoryName}" category? This will not delete the notes in this category.`)) {
+                // Find and remove the category from customCategories array
+                const index = customCategories.findIndex(cat => cat.name === categoryName);
+                if (index !== -1) {
+                    customCategories.splice(index, 1);
+                    
+                    // Remove from category dropdown in note modal
+                    const categorySelect = document.getElementById('noteCategory');
+                    const options = categorySelect.options;
+                    for (let i = 0; i < options.length; i++) {
+                        if (options[i].value === categoryName) {
+                            categorySelect.remove(i);
+                            break;
+                        }
+                    }
+                    
+                    renderCategories();
+                    saveData();
+                    showSaveIndicator(`Category "${categoryName}" deleted successfully!`);
+                }
+            }
+        }
+        
         function renderCategories(filterTag = 'all') {
             const grid = document.getElementById('categoriesGrid');
             if (!grid) return;
@@ -7174,7 +9686,7 @@
                     <div class="category-icon ${cat.id}">${cat.icon}</div>
                     <div class="category-name">${cat.name}</div>
                     <div class="category-description">${cat.description}</div>
-                    <div class="category-count" id="${cat.countId}" onclick="event.stopPropagation(); viewCategoryNotes('${cat.name}');" style="cursor: pointer; color: #000000; text-decoration: underline;">0 notes</div>
+                    <div class="category-count" id="${cat.countId}" onclick="event.stopPropagation(); viewCategoryNotes('${cat.name}');" style="cursor: pointer; text-decoration: underline;">0 notes</div>
                     <button class="btn btn-success" onclick="event.stopPropagation(); showNoteCreationForm('${cat.name}');" style="margin-top: 10px; font-size: 12px; width: 100%;">+ Add Note</button>
                 `;
                 grid.appendChild(card);
@@ -7190,6 +9702,7 @@
                 card.className = 'category-card';
                 card.style.cursor = 'pointer';
                 card.innerHTML = `
+                    <button class="category-delete-btn" onclick="event.stopPropagation(); deleteCategory('${cat.name}');">×</button>
                     <div class="category-icon" style="background: #333333;">${cat.icon}</div>
                     <div class="category-name">${cat.name}</div>
                     <div class="category-description">${cat.description}</div>
@@ -7219,10 +9732,12 @@
             // Clear form fields
             document.getElementById('newNoteTitle').value = '';
             document.getElementById('newNoteDescription').innerHTML = '';
-            document.getElementById('newNoteTags').value = '';
             document.getElementById('newNoteSource').value = '';
             document.getElementById('newNoteImage').value = '';
             document.getElementById('newNoteImagePreview').innerHTML = '';
+            
+            // Populate tags dropdown
+            populateTagsDropdown();
             
             // Scroll to form
             document.getElementById('noteCreationSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -7239,6 +9754,7 @@
             }
             currentNoteCategory = '';
             currentNoteImageData = null;
+            currentEditingNoteId = null;
             
             // Clear form fields
             const titleField = document.getElementById('newNoteTitle');
@@ -7299,7 +9815,7 @@
             const descriptionElement = document.getElementById('newNoteDescription');
             const description = descriptionElement.innerHTML.trim();
             const descriptionText = descriptionElement.textContent.trim();
-            const tagsInput = document.getElementById('newNoteTags').value.trim();
+            const tagsInput = document.getElementById('newNoteTags');
             const source = document.getElementById('newNoteSource').value.trim();
             
             if (!title || !descriptionText) {
@@ -7310,40 +9826,66 @@
             
             console.log('Saving note:', title);
             
-            const tagArray = tagsInput ? tagsInput.split(',').map(t => t.trim()).filter(t => t) : [];
+            // Get selected tags from hidden input
+            const tagArray = tagsInput.value ? tagsInput.value.split(',').filter(t => t) : [];
             
-            const note = {
-                id: Date.now(),
-                title,
-                description,
-                category: currentNoteCategory,
-                tags: tagArray,
-                images: currentNoteImageData ? [currentNoteImageData] : [],
-                image: currentNoteImageData,
-                sources: source ? [source] : [],
-                source: source || 'Original',
-                date: new Date().toLocaleDateString(),
-                content: ''
-            };
+            // Check if we're editing an existing note
+            if (currentEditingNoteId) {
+                // Update existing note
+                const noteIndex = researchNotes.findIndex(n => n.id === currentEditingNoteId);
+                if (noteIndex !== -1) {
+                    researchNotes[noteIndex] = {
+                        ...researchNotes[noteIndex],
+                        title,
+                        description,
+                        category: currentNoteCategory,
+                        tags: tagArray,
+                        images: currentNoteImageData ? [currentNoteImageData] : researchNotes[noteIndex].images || [],
+                        image: currentNoteImageData || researchNotes[noteIndex].image,
+                        sources: source ? [source] : researchNotes[noteIndex].sources || [],
+                        source: source || researchNotes[noteIndex].source || 'Original',
+                        date: researchNotes[noteIndex].date // Keep original date
+                    };
+                    showConfirmation(`Note "${title}" updated successfully!`, 'success');
+                }
+                currentEditingNoteId = null; // Reset editing state
+            } else {
+                // Create new note
+                const note = {
+                    id: Date.now(),
+                    title,
+                    description,
+                    category: currentNoteCategory,
+                    tags: tagArray,
+                    images: currentNoteImageData ? [currentNoteImageData] : [],
+                    image: currentNoteImageData,
+                    sources: source ? [source] : [],
+                    source: source || 'Original',
+                    date: new Date().toLocaleDateString(),
+                    content: ''
+                };
+                
+                researchNotes.push(note);
+                
+                // Show success message based on action
+                if (closeAfterSave) {
+                    showConfirmation(`Note "${title}" saved and closed!`, 'success');
+                } else {
+                    showConfirmation(`Note "${title}" saved successfully!`, 'success');
+                }
+            }
             
-            researchNotes.push(note);
             renderResearchNotes();
             updateCategoryCounts();
             saveData();
             
-            // Show success message based on action
-            if (closeAfterSave) {
-                showConfirmation(`Note "${title}" saved and closed!`, 'success');
-            } else {
-                showConfirmation(`Note "${title}" saved successfully!`, 'success');
-            }
-            
-            // Hide form and reset only if closeAfterSave is true
+            // Hide form and reset only if closeAfterSave is true or if we were editing
             if (closeAfterSave) {
                 hideNoteCreationForm();
                 console.log('Note saved and form hidden');
             } else {
-                // Clear form but keep it open
+                // For new notes, clear form but keep it open
+                // For edits, close the form (currentEditingNoteId was already reset above)
                 document.getElementById('newNoteTitle').value = '';
                 document.getElementById('newNoteDescription').innerHTML = '';
                 document.getElementById('newNoteTags').value = '';
@@ -7356,7 +9898,14 @@
         }
         
         function saveAndCloseNote() {
-            saveNewNote(true);
+            // Save the note first
+            const saved = saveNewNote(true);
+            
+            // Close the note creation section
+            hideNoteCreationForm();
+            
+            // Scroll to the top of the research page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function viewCategoryNotes(categoryName) {
@@ -7376,26 +9925,25 @@
                 grid.innerHTML = '<p style="color: #666666; text-align: center; grid-column: 1/-1;">No notes in this category yet.</p>';
             } else {
                 grid.innerHTML = categoryNotes.map(note => `
-                    <div class="note-card" style="background: #ffffff; backdrop-filter: blur(20px); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 15px; padding: 20px;">
-                        <div class="note-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
-                            <div class="note-title" style="font-size: 1.2rem; font-weight: 600; color: #000000;">${note.title}</div>
+                    <div class="note-card">
+                        <div class="note-header">
+                            <div class="note-title">${note.title}</div>
                             <div>
-                                <span class="note-edit-btn" onclick="openEditNoteModal(${note.id})" title="Edit Note" style="cursor: pointer; margin-right: 10px;">✏️</span>
-                                <span class="note-delete" onclick="deleteNoteFromViewer(${note.id}, '${categoryName}')" title="Delete Note" style="cursor: pointer;">🗑️</span>
+                                <span class="note-edit-btn" onclick="openEditNoteModal(${note.id})" title="Edit Note">✏️</span>
+                                <span class="note-delete" onclick="deleteNoteFromViewer(${note.id}, '${categoryName}')" title="Delete Note">🗑️</span>
                             </div>
                         </div>
                         ${note.image ? `<img src="${note.image}" style="width: 100%; border-radius: 8px; margin-bottom: 10px; max-height: 200px; object-fit: cover;">` : ''}
-                        <div class="note-description" style="color: #000000; margin-bottom: 15px; line-height: 1.6;">${note.description}</div>
+                        <div class="note-description">${note.description}</div>
                         ${note.tags && note.tags.length > 0 ? `
-                            <div class="note-tags" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px;">
-                                ${note.tags.map(tag => `<span class="note-tag" style="background: rgba(0, 0, 0, 0.15); color: #000000; padding: 5px 12px; border-radius: 20px; font-size: 12px;">${tag}</span>`).join('')}
+                            <div class="note-tags">
+                                ${note.tags.map(tag => `<span class="note-tag">${tag}</span>`).join('')}
                             </div>
                         ` : ''}
-                        <div class="note-footer" style="display: flex; justify-content: space-between; align-items: center; color: #666666; font-size: 14px;">
+                        <div class="note-footer">
                             <span>${note.date}</span>
                             <span class="note-source">📎 ${note.source || 'Original'}</span>
                         </div>
-
                     </div>
                 `).join('');
             }
@@ -7651,6 +10199,12 @@
             
             // Apply saved banner settings
             applyBanner();
+            
+            // Auto-save functionality
+            setupAutoSave();
+            
+            // Load dark mode preference
+            loadDarkModePreference();
         });
         
         // Progress tracking functions
@@ -7723,7 +10277,1163 @@
         function updateGridCompletion() {
             updateGridProgress();
         }
-    </script>
+        
+        // Auto-save setup function
+        function setupAutoSave() {
+            // Save when user closes or leaves the page
+            window.addEventListener('beforeunload', function(e) {
+                saveData();
+                // Optional: Show confirmation if there are unsaved changes
+                // Uncomment the lines below if you want to warn users
+                // e.preventDefault();
+                // e.returnValue = '';
+            });
+            
+            // Auto-save every 30 seconds
+            setInterval(function() {
+                saveData();
+                console.log('Auto-saved at:', new Date().toLocaleTimeString());
+            }, 30000); // 30 seconds
+            
+            // Save on visibility change (when tab becomes hidden)
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    saveData();
+                    console.log('Auto-saved on tab hide');
+                }
+            });
+            
+            // Save when user navigates away
+            window.addEventListener('pagehide', function() {
+                saveData();
+            });
+        }
+        
+        // Plot Points Management
+        function initializePlotPoints() {
+            // Default plot point sections
+            const defaultSections = [
+                { id: 'openingHook', name: 'Opening Hook', placeholder: 'How does your story grab the reader\'s attention?', content: '' },
+                { id: 'incitingIncident', name: 'Inciting Incident', placeholder: 'What event sets your story in motion?', content: '' },
+                { id: 'firstPlotPoint', name: 'First Plot Point', placeholder: 'What launches your protagonist into the main story?', content: '' },
+                { id: 'midpoint', name: 'Midpoint', placeholder: 'What major revelation or twist occurs at the story\'s center?', content: '' },
+                { id: 'secondPlotPoint', name: 'Second Plot Point', placeholder: 'What pushes your protagonist toward the final confrontation?', content: '' },
+                { id: 'climax', name: 'Climax', placeholder: 'What is the final confrontation or resolution?', content: '' },
+                { id: 'resolution', name: 'Resolution', placeholder: 'How does your story conclude and what\'s the new normal?', content: '' }
+            ];
+            
+            if (plotPointSections.length === 0) {
+                plotPointSections = defaultSections;
+            }
+            
+            renderPlotPoints();
+        }
+        
+        function renderPlotPoints() {
+            const container = document.getElementById('plotPointsContainer');
+            if (!container) return;
+            
+            container.innerHTML = plotPointSections.map((section, index) => `
+                <div class="plot-point-section" draggable="true" 
+                     ondragstart="handlePlotPointDragStart(event, ${index})"
+                     ondragover="handlePlotPointDragOver(event)"
+                     ondrop="handlePlotPointDrop(event, ${index})"
+                     ondragend="handlePlotPointDragEnd(event)">
+                    <div class="plot-point-header">
+                        <div class="drag-handle" title="Drag to reorder">⋮⋮</div>
+                        <input type="text" class="plot-point-name-input" value="${section.name}" 
+                               onchange="updatePlotPointName(${index}, this.value)" 
+                               placeholder="Section name">
+                        <button class="plot-point-delete-btn" onclick="deletePlotPointSection(${index})" title="Delete section">×</button>
+                    </div>
+                    <textarea class="plot-point-textarea" 
+                              placeholder="${section.placeholder}" 
+                              onchange="updatePlotPointContent(${index}, this.value)">${section.content}</textarea>
+                </div>
+            `).join('');
+        }
+        
+        function addPlotPointSection() {
+            const newSection = {
+                id: 'custom_' + Date.now(),
+                name: 'New Plot Point',
+                placeholder: 'Describe this plot point...',
+                content: ''
+            };
+            
+            plotPointSections.push(newSection);
+            renderPlotPoints();
+            saveData();
+        }
+        
+        function updatePlotPointName(index, newName) {
+            if (plotPointSections[index]) {
+                plotPointSections[index].name = newName;
+                saveData();
+            }
+        }
+        
+        function updatePlotPointContent(index, newContent) {
+            if (plotPointSections[index]) {
+                plotPointSections[index].content = newContent;
+                saveData();
+            }
+        }
+        
+        function deletePlotPointSection(index) {
+            if (confirm('Delete this plot point section?')) {
+                plotPointSections.splice(index, 1);
+                renderPlotPoints();
+                saveData();
+            }
+        }
+        
+        function handlePlotPointDragStart(event, index) {
+            draggedPlotPointIndex = index;
+            event.currentTarget.style.opacity = '0.5';
+        }
+        
+        function handlePlotPointDragOver(event) {
+            event.preventDefault();
+            return false;
+        }
+        
+        function handlePlotPointDrop(event, dropIndex) {
+            event.preventDefault();
+            
+            if (draggedPlotPointIndex !== null && draggedPlotPointIndex !== dropIndex) {
+                const draggedItem = plotPointSections[draggedPlotPointIndex];
+                plotPointSections.splice(draggedPlotPointIndex, 1);
+                
+                if (dropIndex > draggedPlotPointIndex) {
+                    plotPointSections.splice(dropIndex - 1, 0, draggedItem);
+                } else {
+                    plotPointSections.splice(dropIndex, 0, draggedItem);
+                }
+                
+                renderPlotPoints();
+                saveData();
+            }
+            
+            return false;
+        }
+        
+        function handlePlotPointDragEnd(event) {
+            event.currentTarget.style.opacity = '1';
+            draggedPlotPointIndex = null;
+        }
+    
+// VRR Module
+
+// ========================================
+// VISUAL RESEARCH REPOSITORY (VRR) MODULE
+// High-Performance Image Management System
+// ========================================
+
+// VRR Data Store
+const VRRStore = {
+    images: [],
+    folders: [
+        { id: 'all', name: 'All Images', parentId: null, created: Date.now() }
+    ],
+    tags: new Map(),
+    currentFilter: { folder: 'all', tags: [] },
+    currentImageId: null
+};
+
+// Initialize VRR Module
+function initVRR() {
+    loadVRRData();
+    setupVRREventListeners();
+    renderFolderTree();
+    renderTagCloud();
+    renderVRRGallery();
+    updateVRRStats();
+}
+
+// Load VRR Data from LocalStorage
+function loadVRRData() {
+    const stored = localStorage.getItem('scribr_vrr_data');
+    if (stored) {
+        try {
+            const data = JSON.parse(stored);
+            VRRStore.images = data.images || [];
+            VRRStore.folders = data.folders || VRRStore.folders;
+            
+            // Rebuild tags map
+            VRRStore.tags.clear();
+            VRRStore.images.forEach(img => {
+                if (img.tags) {
+                    img.tags.forEach(tag => {
+                        const count = VRRStore.tags.get(tag) || 0;
+                        VRRStore.tags.set(tag, count + 1);
+                    });
+                }
+            });
+        } catch (e) {
+            console.error('Failed to load VRR data:', e);
+        }
+    }
+}
+
+// Save VRR Data to LocalStorage
+function saveVRRData() {
+    const data = {
+        images: VRRStore.images,
+        folders: VRRStore.folders,
+        version: '1.0'
+    };
+    localStorage.setItem('scribr_vrr_data', JSON.stringify(data));
+}
+
+// Setup Event Listeners
+function setupVRREventListeners() {
+    // Edit folder tag input
+    const editFolderNewTag = document.getElementById('editFolderNewTag');
+    if (editFolderNewTag) {
+        editFolderNewTag.addEventListener('keypress', handleEditFolderTagInput);
+    }
+    
+    // Global drag and drop
+    let dragCounter = 0;
+    
+    document.addEventListener('dragenter', (e) => {
+        const vrrSection = document.getElementById('vrrSection');
+        if (vrrSection && vrrSection.style.display !== 'none') {
+            e.preventDefault();
+            dragCounter++;
+            if (dragCounter === 1) {
+                document.getElementById('vrrDropOverlay').classList.add('active');
+            }
+        }
+    });
+    
+    document.addEventListener('dragleave', (e) => {
+        const vrrSection = document.getElementById('vrrSection');
+        if (vrrSection && vrrSection.style.display !== 'none') {
+            dragCounter--;
+            if (dragCounter === 0) {
+                document.getElementById('vrrDropOverlay').classList.remove('active');
+            }
+        }
+    });
+    
+    document.addEventListener('dragover', (e) => {
+        const vrrSection = document.getElementById('vrrSection');
+        if (vrrSection && vrrSection.style.display !== 'none') {
+            e.preventDefault();
+        }
+    });
+    
+    document.addEventListener('drop', async (e) => {
+        const vrrSection = document.getElementById('vrrSection');
+        if (vrrSection && vrrSection.style.display !== 'none') {
+            e.preventDefault();
+            dragCounter = 0;
+            document.getElementById('vrrDropOverlay').classList.remove('active');
+            
+            const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+            if (files.length > 0) {
+                await processImageUploads(files);
+            }
+        }
+    });
+}
+
+// Process Image Uploads
+async function processImageUploads(files) {
+    const progressContainer = document.getElementById('vrrUploadProgress');
+    const uploadList = document.getElementById('vrrUploadList');
+    
+    progressContainer.style.display = 'block';
+    uploadList.innerHTML = '';
+    
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const uploadItem = createUploadItem(file.name, i);
+        uploadList.appendChild(uploadItem);
+        
+        try {
+            await processImageFile(file, uploadItem);
+        } catch (e) {
+            console.error('Failed to process image:', e);
+            updateUploadStatus(uploadItem, 'Failed', true);
+        }
+    }
+    
+    // Auto-close after 2 seconds
+    setTimeout(() => {
+        progressContainer.style.display = 'none';
+    }, 2000);
+    
+    renderVRRGallery();
+    updateVRRStats();
+    renderFolderTree();
+    renderTagCloud();
+    saveVRRData();
+}
+
+// Create Upload Progress Item
+function createUploadItem(filename, index) {
+    const item = document.createElement('div');
+    item.className = 'vrr-upload-item';
+    item.innerHTML = `
+        <div class="vrr-upload-icon">📷</div>
+        <div class="vrr-upload-info">
+            <div class="vrr-upload-name">${filename}</div>
+            <div class="vrr-upload-bar">
+                <div class="vrr-upload-bar-fill" style="width: 0%"></div>
+            </div>
+        </div>
+        <div class="vrr-upload-status">Processing...</div>
+    `;
+    return item;
+}
+
+// Update Upload Progress
+function updateUploadProgress(item, progress) {
+    const fill = item.querySelector('.vrr-upload-bar-fill');
+    fill.style.width = progress + '%';
+}
+
+// Update Upload Status
+function updateUploadStatus(item, status, isError = false) {
+    const statusEl = item.querySelector('.vrr-upload-status');
+    statusEl.textContent = status;
+    if (isError) {
+        statusEl.style.color = '#cc0000';
+    }
+}
+
+// Process Single Image File
+async function processImageFile(file, uploadItem) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        
+        reader.onprogress = (e) => {
+            if (e.lengthComputable) {
+                const progress = (e.loaded / e.total) * 100;
+                updateUploadProgress(uploadItem, progress);
+            }
+        };
+        
+        reader.onload = async (e) => {
+            try {
+                const fullImage = e.target.result;
+                
+                // Generate thumbnail
+                updateUploadStatus(uploadItem, 'Generating thumbnail...');
+                const thumbnail = await generateThumbnail(fullImage, 400);
+                
+                // Create image metadata
+                const img = new Image();
+                img.onload = () => {
+                    const imageData = {
+                        id: generateId(),
+                        title: file.name.replace(/\.[^/.]+$/, ''),
+                        description: '',
+                        source_url: '',
+                        tags: [],
+                        folder_id: VRRStore.currentFilter.folder === 'all' ? 'all' : VRRStore.currentFilter.folder,
+                        thumbnail: thumbnail,
+                        full_image: fullImage,
+                        upload_date: Date.now(),
+                        metadata: {
+                            width: img.width,
+                            height: img.height,
+                            size: file.size,
+                            type: file.type
+                        }
+                    };
+                    
+                    VRRStore.images.unshift(imageData);
+                    updateUploadProgress(uploadItem, 100);
+                    updateUploadStatus(uploadItem, 'Complete ✓');
+                    resolve();
+                };
+                
+                img.onerror = reject;
+                img.src = fullImage;
+            } catch (e) {
+                reject(e);
+            }
+        };
+        
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+    });
+}
+
+// Generate Thumbnail
+function generateThumbnail(dataUrl, maxWidth) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            let width = img.width;
+            let height = img.height;
+            
+            if (width > maxWidth) {
+                height = (height * maxWidth) / width;
+                width = maxWidth;
+            }
+            
+            canvas.width = width;
+            canvas.height = height;
+            ctx.drawImage(img, 0, 0, width, height);
+            
+            resolve(canvas.toDataURL('image/jpeg', 0.85));
+        };
+        img.src = dataUrl;
+    });
+}
+
+// Render VRR Gallery
+function renderVRRGallery() {
+    const masonry = document.getElementById('vrrMasonry');
+    const emptyState = document.getElementById('vrrEmptyState');
+    
+    const filteredImages = getFilteredImages();
+    
+    if (filteredImages.length === 0) {
+        masonry.style.display = 'none';
+        emptyState.style.display = 'block';
+        return;
+    }
+    
+    masonry.style.display = 'grid';
+    emptyState.style.display = 'none';
+    
+    // Clear existing
+    masonry.innerHTML = '';
+    
+    // Render images with lazy loading
+    filteredImages.forEach((image, index) => {
+        const card = createImageCard(image, index);
+        masonry.appendChild(card);
+    });
+    
+    // Setup lazy loading
+    setupLazyLoading();
+}
+
+// Create Image Card
+function createImageCard(image, index) {
+    const card = document.createElement('div');
+    card.className = 'vrr-image-card';
+    card.dataset.imageId = image.id;
+    
+    const tagPreview = image.tags.slice(0, 3).map(tag => 
+        `<span class="vrr-image-tag-mini">${tag}</span>`
+    ).join('');
+    
+    card.innerHTML = `
+        <img src="${image.thumbnail}" alt="${image.title}" loading="lazy" data-full="${image.full_image}">
+        <div class="vrr-image-overlay">
+            <div class="vrr-image-title">${image.title || 'Untitled'}</div>
+            <div class="vrr-image-meta">
+                ${tagPreview}
+            </div>
+        </div>
+        <div class="vrr-image-menu">
+            <button class="vrr-image-menu-btn" onclick="event.stopPropagation(); quickDeleteImage('${image.id}')" title="Delete">🗑️</button>
+        </div>
+    `;
+    
+    card.addEventListener('click', () => openImageModal(image.id));
+    
+    return card;
+}
+
+// Setup Lazy Loading with Intersection Observer
+function setupLazyLoading() {
+    const images = document.querySelectorAll('.vrr-image-card img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    // Image already has thumbnail loaded, just observe for potential full-res loading
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px'
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    }
+}
+
+// Get Filtered Images
+function getFilteredImages() {
+    let filtered = VRRStore.images;
+    
+    // Filter by folder
+    if (VRRStore.currentFilter.folder && VRRStore.currentFilter.folder !== 'all') {
+        filtered = filtered.filter(img => img.folder_id === VRRStore.currentFilter.folder);
+    }
+    
+    // Filter by tags
+    if (VRRStore.currentFilter.tags.length > 0) {
+        filtered = filtered.filter(img => {
+            return VRRStore.currentFilter.tags.every(tag => img.tags.includes(tag));
+        });
+    }
+    
+    return filtered;
+}
+
+// Filter by Folder
+function filterByFolder(folderId) {
+    VRRStore.currentFilter.folder = folderId;
+    
+    // Update active state
+    document.querySelectorAll('.vrr-folder-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    document.querySelector(`[data-folder-id="${folderId}"]`).classList.add('active');
+    
+    renderVRRGallery();
+    updateVRRStats();
+}
+
+// Toggle Tag Filter
+function toggleTagFilter(tagName) {
+    const index = VRRStore.currentFilter.tags.indexOf(tagName);
+    
+    if (index > -1) {
+        VRRStore.currentFilter.tags.splice(index, 1);
+    } else {
+        VRRStore.currentFilter.tags.push(tagName);
+    }
+    
+    renderTagCloud();
+    renderVRRGallery();
+    updateVRRStats();
+}
+
+// Render Folder Tree
+function renderFolderTree() {
+    const tree = document.getElementById('vrrFolderTree');
+    
+    // Count images per folder
+    const folderCounts = {};
+    VRRStore.folders.forEach(folder => {
+        folderCounts[folder.id] = VRRStore.images.filter(img => 
+            folder.id === 'all' ? true : img.folder_id === folder.id
+        ).length;
+    });
+    
+    tree.innerHTML = '';
+    
+    VRRStore.folders.forEach(folder => {
+        const item = document.createElement('li');
+        item.className = 'vrr-folder-item';
+        if (folder.id === VRRStore.currentFilter.folder) {
+            item.classList.add('active');
+        }
+        item.dataset.folderId = folder.id;
+        
+        const folderContent = document.createElement('div');
+        folderContent.style.cssText = 'display: flex; align-items: center; flex: 1; cursor: pointer;';
+        folderContent.onclick = () => filterByFolder(folder.id);
+        
+        folderContent.innerHTML = `
+            <span class="vrr-folder-icon">📁</span>
+            <span class="vrr-folder-name">${folder.name}</span>
+            <span class="vrr-folder-count">${folderCounts[folder.id] || 0}</span>
+        `;
+        
+        item.appendChild(folderContent);
+        
+        // Add edit/delete buttons for custom folders (not "All Images")
+        if (folder.id !== 'all') {
+            const actions = document.createElement('div');
+            actions.className = 'vrr-folder-actions';
+            actions.style.cssText = 'display: none; gap: 4px;';
+            
+            const editBtn = document.createElement('button');
+            editBtn.innerHTML = '✏️';
+            editBtn.className = 'vrr-folder-action-btn';
+            editBtn.title = 'Rename folder';
+            editBtn.onclick = (e) => {
+                e.stopPropagation();
+                startInlineEditFolder(folder.id, item);
+            };
+            
+            const deleteBtn = document.createElement('button');
+            deleteBtn.innerHTML = '🗑️';
+            deleteBtn.className = 'vrr-folder-action-btn';
+            deleteBtn.title = 'Delete folder';
+            deleteBtn.onclick = (e) => {
+                e.stopPropagation();
+                deleteFolder(folder.id);
+            };
+            
+            actions.appendChild(editBtn);
+            actions.appendChild(deleteBtn);
+            item.appendChild(actions);
+            
+            // Show/hide actions on hover
+            item.onmouseenter = () => {
+                actions.style.display = 'flex';
+            };
+            item.onmouseleave = () => {
+                actions.style.display = 'none';
+            };
+        }
+        
+        tree.appendChild(item);
+    });
+}
+
+// Render Tag Cloud
+function renderTagCloud() {
+    // Tag cloud disabled - tags feature removed from Visual Repository
+    return;
+}
+
+// Update VRR Stats
+function updateVRRStats() {
+    const stats = document.getElementById('vrrGalleryStats');
+    const filtered = getFilteredImages();
+    const total = VRRStore.images.length;
+    
+    if (filtered.length === total) {
+        stats.textContent = `${total} image${total !== 1 ? 's' : ''}`;
+    } else {
+        stats.textContent = `${filtered.length} of ${total} images`;
+    }
+}
+
+// Open Image Modal
+function openImageModal(imageId) {
+    const image = VRRStore.images.find(img => img.id === imageId);
+    if (!image) return;
+    
+    VRRStore.currentImageId = imageId;
+    
+    const modal = document.getElementById('vrrModal');
+    const modalImage = document.getElementById('vrrModalDetailImage');
+    const titleInput = document.getElementById('vrrModalTitle');
+    const descInput = document.getElementById('vrrModalDescription');
+    const sourceInput = document.getElementById('vrrModalSource');
+    const folderSelect = document.getElementById('vrrModalFolder');
+    
+    // Set image
+    modalImage.src = image.full_image;
+    
+    // Set form values
+    titleInput.value = image.title || '';
+    descInput.value = image.description || '';
+    sourceInput.value = image.source_url || '';
+    
+    // Render tags
+    renderModalTags(image.tags || []);
+    
+    // Update folder select
+    folderSelect.innerHTML = '';
+    VRRStore.folders.forEach(folder => {
+        const option = document.createElement('option');
+        option.value = folder.id;
+        option.textContent = folder.name;
+        if (folder.id === image.folder_id) {
+            option.selected = true;
+        }
+        folderSelect.appendChild(option);
+    });
+    
+    modal.classList.add('active');
+}
+
+// Close Image Modal
+function closeImageModal() {
+    document.getElementById('vrrModal').classList.remove('active');
+    VRRStore.currentImageId = null;
+}
+
+// Render Modal Tags
+function renderModalTags(tags) {
+    const container = document.getElementById('vrrModalTagContainer');
+    const input = document.getElementById('vrrModalTagInput');
+    
+    // Clear existing tokens
+    const existingTokens = container.querySelectorAll('.vrr-tag-token');
+    existingTokens.forEach(token => token.remove());
+    
+    // Add tag tokens
+    tags.forEach(tag => {
+        const token = document.createElement('div');
+        token.className = 'vrr-tag-token';
+        token.innerHTML = `
+            ${tag}
+            <button class="vrr-tag-token-remove" onclick="removeModalTag('${tag}')">×</button>
+        `;
+        container.insertBefore(token, input);
+    });
+}
+
+// Handle Tag Input
+function handleTagInput(event) {
+    // Tags feature disabled
+    return;
+}
+
+// Remove Modal Tag
+function removeModalTag(tag) {
+    // Tags feature disabled
+    return;
+}
+
+// Focus Tag Input
+function focusTagInput() {
+    // Tags feature disabled
+    return;
+}
+
+// Save Image Metadata
+function saveImageMetadata() {
+    const image = VRRStore.images.find(img => img.id === VRRStore.currentImageId);
+    if (!image) return;
+    
+    image.title = document.getElementById('vrrModalTitle').value;
+    image.description = document.getElementById('vrrModalDescription').value;
+    image.source_url = document.getElementById('vrrModalSource').value;
+    image.folder_id = document.getElementById('vrrModalFolder').value;
+    
+    // Update tags map
+    VRRStore.tags.clear();
+    VRRStore.images.forEach(img => {
+        if (img.tags) {
+            img.tags.forEach(tag => {
+                const count = VRRStore.tags.get(tag) || 0;
+                VRRStore.tags.set(tag, count + 1);
+            });
+        }
+    });
+    
+    saveVRRData();
+    renderVRRGallery();
+    renderFolderTree();
+    renderTagCloud();
+    closeImageModal();
+}
+
+// Delete Image
+function deleteImage() {
+    if (!confirm('Are you sure you want to delete this image?')) return;
+    
+    const index = VRRStore.images.findIndex(img => img.id === VRRStore.currentImageId);
+    if (index > -1) {
+        VRRStore.images.splice(index, 1);
+        
+        // Update tags map
+        VRRStore.tags.clear();
+        VRRStore.images.forEach(img => {
+            if (img.tags) {
+                img.tags.forEach(tag => {
+                    const count = VRRStore.tags.get(tag) || 0;
+                    VRRStore.tags.set(tag, count + 1);
+                });
+            }
+        });
+        
+        saveVRRData();
+        renderVRRGallery();
+        renderFolderTree();
+        renderTagCloud();
+        updateVRRStats();
+        closeImageModal();
+    }
+}
+
+// Quick Delete Image
+function openImageModal(imageId) {
+    const allImages = getFilteredImages();
+    const imageIndex = allImages.findIndex(img => img.id === imageId);
+    if (imageIndex === -1) return;
+
+    renderImageModal(allImages[imageIndex]);
+    document.getElementById('vrrImageModal').classList.add('active');
+}
+
+function renderImageModal(image) {
+    const modalImage = document.getElementById('vrrModalImage');
+    const modalImageId = document.getElementById('vrrModalImageId');
+    const modalImageIndex = document.getElementById('vrrModalImageIndex');
+    const modalImageCount = document.getElementById('vrrModalImageCount');
+    const prevBtn = document.getElementById('vrrModalPrev');
+    const nextBtn = document.getElementById('vrrModalNext');
+
+    const allImages = getFilteredImages();
+    const currentImageIndex = allImages.findIndex(img => img.id === image.id);
+
+    modalImage.src = image.full_image;
+    modalImageId.value = image.id;
+    
+    // Remove conflicting CSS class and ensure proper styling
+    modalImage.className = '';
+    modalImage.style.maxWidth = '90vw';
+    modalImage.style.maxHeight = '90vh';
+    modalImage.style.width = 'auto';
+    modalImage.style.height = 'auto';
+    modalImage.style.objectFit = 'contain';
+    modalImage.style.display = 'block';
+    
+    // Update index display
+    modalImageIndex.textContent = currentImageIndex + 1;
+    modalImageCount.textContent = allImages.length;
+
+    // Update navigation buttons
+    prevBtn.disabled = currentImageIndex === 0;
+    nextBtn.disabled = currentImageIndex === allImages.length - 1;
+}
+
+function navigateImage(direction) {
+    const allImages = getFilteredImages();
+    const currentImageId = document.getElementById('vrrModalImageId').value;
+    let currentImageIndex = allImages.findIndex(img => img.id === currentImageId);
+
+    if (currentImageIndex === -1) return;
+
+    let newIndex = currentImageIndex + direction;
+
+    if (newIndex >= 0 && newIndex < allImages.length) {
+        const newImage = allImages[newIndex];
+        renderImageModal(newImage);
+    }
+}
+
+function saveImageDetails(imageId) {
+    const image = VRRStore.images.find(img => img.id === imageId);
+    if (!image) return;
+
+    image.title = document.getElementById('vrrModalTitle').value.trim();
+    image.description = document.getElementById('vrrModalDescription').value.trim();
+    image.source_url = document.getElementById('vrrModalSource').value.trim();
+    
+    // Note: Tag editing is not implemented here, only saving other details.
+    
+    saveVRRData();
+    renderVRRGallery();
+    showSaveIndicator('Image details updated!');
+    closeImageModal();
+}
+
+function closeImageModal() {
+    document.getElementById('vrrImageModal').classList.remove('active');
+}
+
+function quickDeleteImage(imageId) {
+    if (confirm('Are you sure you want to delete this image?')) {
+        VRRStore.images = VRRStore.images.filter(img => img.id !== imageId);
+        saveVRRData();
+        renderVRRGallery();
+        updateVRRStats();
+        renderFolderTree();
+        renderTagCloud();
+        closeImageModal();
+    }
+}
+
+// Add keyboard navigation for the modal
+document.addEventListener('keydown', (e) => {
+    if (document.getElementById('vrrImageModal') && document.getElementById('vrrImageModal').classList.contains('active')) {
+        if (e.key === 'ArrowLeft') {
+            navigateImage(-1);
+        } else if (e.key === 'ArrowRight') {
+            navigateImage(1);
+        } else if (e.key === 'Escape') {
+            closeImageModal();
+        }
+    }
+});
+
+function quickDeleteImage(imageId) {
+    if (!confirm('Delete this image?')) return;
+    
+    const index = VRRStore.images.findIndex(img => img.id === imageId);
+    if (index > -1) {
+        VRRStore.images.splice(index, 1);
+        
+        // Update tags map
+        VRRStore.tags.clear();
+        VRRStore.images.forEach(img => {
+            if (img.tags) {
+                img.tags.forEach(tag => {
+                    const count = VRRStore.tags.get(tag) || 0;
+                    VRRStore.tags.set(tag, count + 1);
+                });
+            }
+        });
+        
+        saveVRRData();
+        renderVRRGallery();
+        renderFolderTree();
+        renderTagCloud();
+        updateVRRStats();
+    }
+}
+
+// Create New Folder
+function createFolder() {
+    // Find next available "New Folder" number
+    let folderNumber = 1;
+    let folderName = 'New Folder';
+    
+    while (VRRStore.folders.find(f => f.name === folderName)) {
+        folderNumber++;
+        folderName = `New Folder ${folderNumber}`;
+    }
+    
+    // Create folder immediately
+    const folder = {
+        id: generateId(),
+        name: folderName,
+        parentId: null,
+        tags: [], // New property for folder tags
+        created: Date.now()
+    };
+    
+    VRRStore.folders.push(folder);
+    saveVRRData();
+    renderFolderTree();
+    
+    // Update folder select in modal if open
+    if (VRRStore.currentImageId) {
+        const folderSelect = document.getElementById('vrrModalFolder');
+        const option = document.createElement('option');
+        option.value = folder.id;
+        option.textContent = folder.name;
+        folderSelect.appendChild(option);
+    }
+}
+
+// Toggle VRR Sidebar
+function deleteFolder(folderId) {
+    if (confirm('Are you sure you want to delete this folder? All images in this folder will be moved to "All Images".')) {
+        // 1. Remove the folder from the store
+        const folderIndex = VRRStore.folders.findIndex(f => f.id === folderId);
+        if (folderIndex > -1) {
+            VRRStore.folders.splice(folderIndex, 1);
+        }
+
+        // 2. Move images from the deleted folder to 'all' (by setting folder_id to null)
+        VRRStore.images.forEach(img => {
+            if (img.folder_id === folderId) {
+                img.folder_id = null;
+            }
+        });
+
+        // 3. Update UI and save data
+        saveVRRData();
+        renderFolderTree();
+        renderGallery();
+    }
+}
+
+function editFolder(folderId) {
+    // Use inline editing instead of modal
+    const folderItem = document.querySelector(`[data-folder-id="${folderId}"]`);
+    if (folderItem) {
+        startInlineEditFolder(folderId, folderItem);
+    }
+}
+
+function startInlineEditFolder(folderId, folderItem) {
+    const folder = VRRStore.folders.find(f => f.id === folderId);
+    if (!folder) return;
+    
+    // Find the folder name span
+    const folderNameSpan = folderItem.querySelector('.vrr-folder-name');
+    if (!folderNameSpan) return;
+    
+    // Store original name for cancel
+    const originalName = folder.name;
+    
+    // Create input element
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = folder.name;
+    input.className = 'vrr-folder-name-input';
+    input.style.cssText = `
+        flex: 1;
+        padding: 4px 8px;
+        border: 2px solid #667eea;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        background: white;
+        color: #000;
+    `;
+    
+    // Apply dark mode styles if needed
+    if (document.body.classList.contains('dark-mode')) {
+        input.style.background = 'rgba(255, 255, 255, 0.05)';
+        input.style.color = '#ffffff';
+        input.style.borderColor = '#667eea';
+    }
+    
+    // Replace span with input
+    folderNameSpan.replaceWith(input);
+    input.focus();
+    input.select();
+    
+    // Save function
+    const saveEdit = () => {
+        const newName = input.value.trim();
+        if (newName && newName !== originalName) {
+            folder.name = newName;
+            saveVRRData();
+        }
+        // Restore the folder tree
+        renderFolderTree();
+    };
+    
+    // Cancel function
+    const cancelEdit = () => {
+        renderFolderTree();
+    };
+    
+    // Event listeners
+    input.addEventListener('blur', saveEdit);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            saveEdit();
+        } else if (e.key === 'Escape') {
+            e.preventDefault();
+            cancelEdit();
+        }
+    });
+    
+    // Prevent folder selection when clicking input
+    input.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+}
+
+function showEditFolderModal(folderId) {
+    const folder = VRRStore.folders.find(f => f.id === folderId);
+    if (!folder) return;
+
+    document.getElementById('editFolderModalTitle').textContent = `Edit Folder: ${folder.name}`;
+    document.getElementById('editFolderId').value = folder.id;
+    document.getElementById('editFolderName').value = folder.name;
+    
+    // Clear previous tags and set up for new ones
+    const tagsContainer = document.getElementById('editFolderTagsContainer');
+    tagsContainer.innerHTML = '';
+    
+    // Add existing tags
+    if (folder.tags && folder.tags.length > 0) {
+        folder.tags.forEach(tag => {
+            createTagElement(tag, tagsContainer, true);
+        });
+    }
+    
+    document.getElementById('editFolderModal').style.display = 'flex';
+}
+
+function closeEditFolderModal() {
+    document.getElementById('editFolderModal').style.display = 'none';
+}
+
+function saveEditedFolder() {
+    const folderId = document.getElementById('editFolderId').value;
+    const newName = document.getElementById('editFolderName').value.trim();
+    const tagsContainer = document.getElementById('editFolderTagsContainer');
+    
+    const folder = VRRStore.folders.find(f => f.id === folderId);
+    if (!folder || !newName) return;
+
+    // 1. Update name
+    folder.name = newName;
+
+    // 2. Update tags
+    const newTags = Array.from(tagsContainer.querySelectorAll('.note-tag')).map(el => el.dataset.tag);
+    folder.tags = newTags;
+
+    // 3. Save and re-render
+    saveVRRData();
+    renderFolderTree();
+    renderVRRGallery();
+    closeEditFolderModal();
+}
+
+function createTagElement(tag, container, removable = false) {
+    const tagEl = document.createElement('span');
+    tagEl.className = 'note-tag';
+    tagEl.dataset.tag = tag;
+    tagEl.textContent = tag;
+    tagEl.style.cssText = 'display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 4px; font-size: 12px;';
+    
+    if (removable) {
+        const removeBtn = document.createElement('span');
+        removeBtn.textContent = '×';
+        removeBtn.style.cssText = 'cursor: pointer; font-weight: bold; margin-left: 4px;';
+        removeBtn.onclick = () => tagEl.remove();
+        tagEl.appendChild(removeBtn);
+    }
+    
+    container.appendChild(tagEl);
+}
+
+function handleEditFolderTagInput(event) {
+    if (event.key === 'Enter' && event.target.value.trim()) {
+        event.preventDefault();
+        const tag = event.target.value.trim();
+        const tagsContainer = document.getElementById('editFolderTagsContainer');
+        createTagElement(tag, tagsContainer, true);
+        event.target.value = '';
+    }
+}
+
+function toggleVRRSidebar() {
+    const sidebar = document.getElementById('vrrSidebar');
+    sidebar.classList.toggle('collapsed');
+}
+
+// Handle File Input Upload
+function handleFileInputUpload(event) {
+    const files = Array.from(event.target.files);
+    if (files.length > 0) {
+        processImageUploads(files);
+    }
+    event.target.value = ''; // Reset input
+}
+
+// Close Upload Progress
+function closeUploadProgress() {
+    document.getElementById('vrrUploadProgress').style.display = 'none';
+}
+
+// Generate Unique ID
+function generateId() {
+    return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+}
+
+// Initialize VRR when section is shown
+const originalShowSection = window.showSection;
+window.showSection = function(section) {
+    if (originalShowSection) {
+        originalShowSection(section);
+    }
+    
+    if (section === 'vrr') {
+        // Initialize VRR on first load
+        if (!window.vrrInitialized) {
+            initVRR();
+            window.vrrInitialized = true;
+        }
+    }
+};
+
+</script>
 
     <!-- Add/Edit Note Modal -->
     <div class="note-modal" id="noteModal">
@@ -7785,7 +11495,36 @@
             
             <div class="note-modal-actions">
                 <button class="note-modal-btn note-modal-btn-primary" onclick="saveNote()" id="saveNoteBtn">Save Note</button>
+                <button class="note-modal-btn note-modal-btn-secondary" onclick="exportCurrentNoteAsWord()" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">📄 Export as Word</button>
                 <button class="note-modal-btn note-modal-btn-secondary" onclick="closeNoteModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Folder Modal -->
+    <div class="note-modal" id="editFolderModal" style="display: none;">
+        <div class="note-modal-content" style="max-width: 500px;">
+            <div class="note-modal-header">
+                <div class="note-modal-title" id="editFolderModalTitle">Edit Folder</div>
+                <button class="note-modal-close" onclick="closeEditFolderModal()">×</button>
+            </div>
+            
+            <input type="hidden" id="editFolderId">
+
+            <div class="note-form-group">
+                <label class="note-form-label">Folder Name *</label>
+                <input type="text" class="note-form-input" id="editFolderName" placeholder="Enter folder name">
+            </div>
+            
+            <div class="note-form-group">
+                <label class="note-form-label">Tags</label>
+                <div id="editFolderTagsContainer" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;"></div>
+                <input type="text" class="note-form-input" id="editFolderNewTag" placeholder="Add a tag and press Enter">
+            </div>
+
+            <div class="note-modal-actions">
+                <button class="note-modal-btn note-modal-btn-primary" onclick="saveEditedFolder()">Save Changes</button>
+                <button class="note-modal-btn note-modal-btn-secondary" onclick="closeEditFolderModal()">Cancel</button>
             </div>
         </div>
     </div>
@@ -7819,6 +11558,20 @@
             </div>
         </div>
     </div>
+
+<!-- Image Modal -->
+<div id="vrrImageModal" class="vrr-modal" style="display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); align-items: center; justify-content: center;">
+    <input type="hidden" id="vrrModalImageId">
+    <button class="vrr-modal-close" onclick="closeImageModal()" style="position: fixed; top: 20px; right: 20px; z-index: 10001; background: rgba(255, 255, 255, 0.2); color: white; border: none; width: 48px; height: 48px; border-radius: 8px; font-size: 28px; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px);">×</button>
+    <button id="vrrModalPrev" class="vrr-nav-btn" onclick="navigateImage(-1)" style="position: fixed; left: 20px; top: 50%; transform: translateY(-50%); z-index: 10001; background: rgba(255, 255, 255, 0.2); color: white; border: none; padding: 20px 15px; font-size: 28px; cursor: pointer; border-radius: 8px; backdrop-filter: blur(10px);">&#10094;</button>
+    <button id="vrrModalNext" class="vrr-nav-btn" onclick="navigateImage(1)" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 10001; background: rgba(255, 255, 255, 0.2); color: white; border: none; padding: 20px 15px; font-size: 28px; cursor: pointer; border-radius: 8px; backdrop-filter: blur(10px);">&#10095;</button>
+    <div style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 0.7); color: white; padding: 10px 20px; border-radius: 20px; z-index: 10001; backdrop-filter: blur(10px);">
+        <span style="font-weight: 600;">
+            Image <span id="vrrModalImageIndex">1</span> of <span id="vrrModalImageCount">1</span>
+        </span>
+    </div>
+    <img id="vrrModalImage" src="" alt="Full Image" style="max-width: 90vw; max-height: 90vh; width: auto; height: auto; object-fit: contain; border-radius: 8px; display: block; position: relative; z-index: 10002;">
+</div>
 
 </body>
 </html>
