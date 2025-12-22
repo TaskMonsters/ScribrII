@@ -380,6 +380,63 @@
         body.dark-mode .image-drop-zone-icon {
             color: rgba(255, 255, 255, 0.7);
         }
+        
+        /* Dark mode comment popup styles */
+        body.dark-mode .comment-popup {
+            background: rgba(26, 26, 46, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .comment-popup h4 {
+            color: #ffffff;
+        }
+        
+        body.dark-mode .comment-item {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        body.dark-mode .comment-author {
+            color: #ffffff;
+        }
+        
+        body.dark-mode .comment-text {
+            color: #e0e0e0;
+        }
+        
+        body.dark-mode .comment-time {
+            color: #a0a0a0;
+        }
+        
+        body.dark-mode .comment-form {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        body.dark-mode .comment-form input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .comment-form textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .comment-form input::placeholder,
+        body.dark-mode .comment-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        body.dark-mode .comment-btn.primary {
+            background: linear-gradient(135deg, #4c51bf, #5b21b6, #6366f1);
+            color: #ffffff;
+        }
+        
+        body.dark-mode .comment-btn.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+        }
 
         /* Passkey Modal */
         .passkey-modal {
@@ -2530,7 +2587,7 @@
 
         .comment-popup {
             position: absolute;
-            background: rgba(26, 26, 46, 0.98);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: 12px;
@@ -2615,7 +2672,7 @@
         .comment-form input {
             width: 100%;
             background: rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: 6px;
             padding: 8px 12px;
             color: #000000;
@@ -2626,7 +2683,7 @@
         .comment-form textarea {
             width: 100%;
             background: rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: 6px;
             padding: 8px 12px;
             color: #000000;
@@ -5022,6 +5079,29 @@ body.dark-mode .vrr-nav-btn:hover:not(:disabled) {
                 <input type="text" id="storyAuthor" placeholder="Author Name" onchange="saveData()">
             </div>
 
+            <!-- File Management -->
+            <div class="file-management" style="display: flex; justify-content: center; align-items: center; gap: 12px; margin: 20px 0; padding: 15px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 16px; flex-wrap: wrap;">
+                <button onclick="createNewStoryInLibrary()" class="file-btn" style="padding: 10px 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.3)';">
+                    📄 New Story
+                </button>
+                <button onclick="openStoryLibrary()" class="file-btn" style="padding: 10px 18px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; border: none; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(250, 112, 154, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(250, 112, 154, 0.3)';">
+                    📚 My Stories
+                </button>
+                <button onclick="saveToLibrary()" class="file-btn" style="padding: 10px 18px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(79, 172, 254, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(79, 172, 254, 0.3)';">
+                    💾 Save
+                </button>
+                <button onclick="saveStoryToFile()" class="file-btn" style="padding: 10px 18px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; border: none; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(168, 237, 234, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(168, 237, 234, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(168, 237, 234, 0.3)';">
+                    📥 Export
+                </button>
+                <button onclick="document.getElementById('loadFileInput').click()" class="file-btn" style="padding: 10px 18px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(240, 147, 251, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(240, 147, 251, 0.3)';">
+                    📂 Import
+                </button>
+                <input type="file" id="loadFileInput" accept=".json" style="display: none;" onchange="loadStoryFromFile(event)">
+                <div id="currentFilename" style="color: #666; font-size: 13px; font-style: italic; margin-left: 10px; flex-basis: 100%; text-align: center;">
+                    Current: <span id="filenameDisplay">Untitled Story</span>
+                </div>
+            </div>
+
             <!-- Navigation -->
             <div class="nav-tabs">
                 <div class="nav-tab" onclick="showSection('research')">🔍 Research</div>
@@ -5769,6 +5849,7 @@ body.dark-mode .vrr-nav-btn:hover:not(:disabled) {
 
         // Initialize application
         function init() {
+            initStoryLibrary();
             loadData();
             generateGrid();
             generateCharacterList();
@@ -7244,6 +7325,15 @@ function exportToExcel() {
                 localStorage.setItem('storyGridsData', JSON.stringify(data));
                 updateSnowflakeProgress();
                 updateGridProgress();
+                
+                // Also update in library if current story exists
+                if (currentStoryId && storyLibrary[currentStoryId]) {
+                    storyLibrary[currentStoryId].data = data;
+                    storyLibrary[currentStoryId].title = data.storyTitle || 'Untitled Story';
+                    storyLibrary[currentStoryId].author = data.storyAuthor || '';
+                    storyLibrary[currentStoryId].lastModified = new Date().toISOString();
+                    saveLibraryToStorage();
+                }
             } catch (e) {
                 console.error("Error saving data to localStorage:", e);
             }
@@ -7423,6 +7513,676 @@ function exportToExcel() {
                 saveData();
             }, 30000); // Save every 30 seconds
         }
+
+        // File Management Functions
+        let currentStoryFilename = 'Untitled Story';
+
+        // Story Library Management
+        let storyLibrary = {};
+        let currentStoryId = null;
+
+        // Initialize story library
+        function initStoryLibrary() {
+            const saved = localStorage.getItem('scribr_story_library');
+            if (saved) {
+                try {
+                    const libraryData = JSON.parse(saved);
+                    storyLibrary = libraryData.stories || {};
+                    currentStoryId = libraryData.currentStoryId || null;
+                } catch (e) {
+                    console.error('Error loading story library:', e);
+                    storyLibrary = {};
+                    currentStoryId = null;
+                }
+            }
+
+            // Migrate existing story if present and library is empty
+            if (Object.keys(storyLibrary).length === 0) {
+                const existingStory = localStorage.getItem('storyGridsData');
+                if (existingStory) {
+                    try {
+                        const data = JSON.parse(existingStory);
+                        if (data.storyTitle || data.storyAuthor) {
+                            // Create a story from existing data
+                            const storyId = 'story_' + Date.now();
+                            storyLibrary[storyId] = {
+                                id: storyId,
+                                title: data.storyTitle || 'Untitled Story',
+                                author: data.storyAuthor || '',
+                                created: new Date().toISOString(),
+                                lastModified: new Date().toISOString(),
+                                data: data
+                            };
+                            currentStoryId = storyId;
+                            saveLibraryToStorage();
+                        }
+                    } catch (e) {
+                        console.error('Error migrating existing story:', e);
+                    }
+                }
+            }
+        }
+
+        // Save library to localStorage
+        function saveLibraryToStorage() {
+            try {
+                const libraryData = {
+                    currentStoryId: currentStoryId,
+                    stories: storyLibrary
+                };
+                localStorage.setItem('scribr_story_library', JSON.stringify(libraryData));
+            } catch (e) {
+                console.error('Error saving library:', e);
+                if (e.name === 'QuotaExceededError') {
+                    showConfirmation('Storage limit reached! Please export some stories to files and delete them from the library.', 'error');
+                }
+            }
+        }
+
+        // Get current story data
+        function getCurrentStoryData() {
+            return {
+                storyTitle: document.getElementById('storyTitle').value,
+                storyAuthor: document.getElementById('storyAuthor').value,
+                gridData: gridData,
+                actNumbers: actNumbers,
+                characters: characters,
+                synopsisSections: synopsisSections,
+                characterCharts: characterCharts,
+                sceneItems: sceneItems,
+                chapters: chapters,
+                chapterPanelVisible: chapterPanelVisible,
+                snowflakeData: {
+                    oneSentence: document.getElementById('oneSentence')?.value || '',
+                    storySetup: document.getElementById('storySetup')?.value || '',
+                    firstDisaster: document.getElementById('firstDisaster')?.value || '',
+                    secondDisaster: document.getElementById('secondDisaster')?.value || '',
+                    thirdDisaster: document.getElementById('thirdDisaster')?.value || '',
+                    storyEnding: document.getElementById('storyEnding')?.value || '',
+                    fourPageOne: document.getElementById('fourPageOne')?.value || '',
+                    fourPageTwo: document.getElementById('fourPageTwo')?.value || '',
+                    fourPageThree: document.getElementById('fourPageThree')?.value || '',
+                    fourPageFour: document.getElementById('fourPageFour')?.value || '',
+                    openingHook: document.getElementById('openingHook')?.value || '',
+                    incitingIncident: document.getElementById('incitingIncident')?.value || '',
+                    firstPlotPoint: document.getElementById('firstPlotPoint')?.value || '',
+                    midpoint: document.getElementById('midpoint')?.value || '',
+                    secondPlotPoint: document.getElementById('secondPlotPoint')?.value || '',
+                    climax: document.getElementById('climax')?.value || '',
+                    resolution: document.getElementById('resolution')?.value || ''
+                },
+                plotPointSections: plotPointSections,
+                researchNotes: researchNotes,
+                customTags: customTags,
+                customCategories: customCategories,
+                timerSeconds: timerSeconds,
+                timerRunning: timerRunning,
+                currentSection: currentSection,
+                currentSnowflakeStep: currentSnowflakeStep
+            };
+        }
+
+        // Save current story to library
+        function saveToLibrary() {
+            const storyData = getCurrentStoryData();
+            const title = storyData.storyTitle || 'Untitled Story';
+            
+            // If no current story ID, create new one
+            if (!currentStoryId) {
+                currentStoryId = 'story_' + Date.now();
+            }
+
+            // Check if story exists
+            const isNew = !storyLibrary[currentStoryId];
+
+            // Save to library
+            storyLibrary[currentStoryId] = {
+                id: currentStoryId,
+                title: title,
+                author: storyData.storyAuthor || '',
+                created: storyLibrary[currentStoryId]?.created || new Date().toISOString(),
+                lastModified: new Date().toISOString(),
+                data: storyData
+            };
+
+            saveLibraryToStorage();
+            
+            // Update filename display
+            currentStoryFilename = title;
+            updateFilenameDisplay();
+
+            showConfirmation(isNew ? 'Story saved to library!' : 'Story updated in library!', 'success');
+        }
+
+        // Load story from library
+        function loadFromLibrary(storyId) {
+            if (!storyLibrary[storyId]) {
+                showConfirmation('Story not found!', 'error');
+                return;
+            }
+
+            const story = storyLibrary[storyId];
+            const data = story.data;
+
+            // Load all data
+            document.getElementById('storyTitle').value = data.storyTitle || '';
+            document.getElementById('storyAuthor').value = data.storyAuthor || '';
+
+            if (data.gridData) gridData = data.gridData;
+            if (data.actNumbers) actNumbers = data.actNumbers;
+            if (data.characters) characters = data.characters;
+            if (data.synopsisSections) synopsisSections = data.synopsisSections;
+            if (data.characterCharts) characterCharts = data.characterCharts;
+            if (data.sceneItems) sceneItems = data.sceneItems;
+            if (data.chapters) chapters = data.chapters;
+            if (data.chapterPanelVisible !== undefined) chapterPanelVisible = data.chapterPanelVisible;
+
+            // Load snowflake data
+            if (data.snowflakeData) {
+                setTimeout(() => {
+                    Object.keys(data.snowflakeData).forEach(key => {
+                        const element = document.getElementById(key);
+                        if (element) element.value = data.snowflakeData[key];
+                    });
+                }, 100);
+            }
+
+            if (data.plotPointSections) {
+                plotPointSections = data.plotPointSections;
+                renderPlotPoints();
+            }
+
+            if (data.researchNotes) {
+                researchNotes = data.researchNotes;
+                renderResearchNotes();
+                updateCategoryCounts();
+            }
+
+            if (data.customTags) customTags = data.customTags;
+            if (data.customCategories) customCategories = data.customCategories;
+            if (data.timerSeconds !== undefined) {
+                timerSeconds = data.timerSeconds;
+                updateTimerDisplay();
+            }
+            if (data.currentSection) currentSection = data.currentSection;
+            if (data.currentSnowflakeStep) currentSnowflakeStep = data.currentSnowflakeStep;
+
+            // Refresh UI
+            generateGrid();
+            generateCharacterList();
+            generateCharacterSynopses();
+            generateSynopsisSections();
+            generateCharacterCharts();
+            generateSceneList();
+            generateChapterList();
+            updateSnowflakeNavigation();
+
+            // Update current story
+            currentStoryId = storyId;
+            currentStoryFilename = story.title;
+            updateFilenameDisplay();
+
+            // Save to localStorage for auto-save
+            saveData();
+            saveLibraryToStorage();
+
+            closeStoryLibrary();
+            showConfirmation('Story "' + story.title + '" loaded!', 'success');
+        }
+
+        // Delete story from library
+        function deleteFromLibrary(storyId) {
+            if (!storyLibrary[storyId]) return;
+
+            const story = storyLibrary[storyId];
+            if (!confirm('Are you sure you want to delete "' + story.title + '"? This cannot be undone.')) {
+                return;
+            }
+
+            delete storyLibrary[storyId];
+            saveLibraryToStorage();
+
+            // If deleting current story, create new one
+            if (currentStoryId === storyId) {
+                createNewStoryInLibrary();
+            }
+
+            renderStoryLibrary();
+            showConfirmation('Story deleted!', 'success');
+        }
+
+        // Rename story in library
+        function renameStoryInLibrary(storyId, newTitle) {
+            if (!storyLibrary[storyId] || !newTitle.trim()) return;
+
+            storyLibrary[storyId].title = newTitle.trim();
+            storyLibrary[storyId].lastModified = new Date().toISOString();
+            
+            // Update data title too
+            if (storyLibrary[storyId].data) {
+                storyLibrary[storyId].data.storyTitle = newTitle.trim();
+            }
+
+            saveLibraryToStorage();
+
+            // If renaming current story, update display
+            if (currentStoryId === storyId) {
+                document.getElementById('storyTitle').value = newTitle.trim();
+                currentStoryFilename = newTitle.trim();
+                updateFilenameDisplay();
+            }
+
+            renderStoryLibrary();
+        }
+
+        // Open story library modal
+        function openStoryLibrary() {
+            renderStoryLibrary();
+            document.getElementById('storyLibraryModal').style.display = 'flex';
+        }
+
+        // Close story library modal
+        function closeStoryLibrary() {
+            document.getElementById('storyLibraryModal').style.display = 'none';
+        }
+
+        // Render story library
+        function renderStoryLibrary() {
+            const listContainer = document.getElementById('storyLibraryList');
+            const emptyMessage = document.getElementById('emptyLibraryMessage');
+            
+            const stories = Object.values(storyLibrary).sort((a, b) => 
+                new Date(b.lastModified) - new Date(a.lastModified)
+            );
+
+            if (stories.length === 0) {
+                listContainer.innerHTML = '';
+                emptyMessage.style.display = 'block';
+                return;
+            }
+
+            emptyMessage.style.display = 'none';
+            
+            listContainer.innerHTML = stories.map(story => {
+                const lastModified = new Date(story.lastModified).toLocaleString();
+                const isCurrent = story.id === currentStoryId;
+                
+                return `
+                    <div class="story-card" style="background: ${isCurrent ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' : '#f8f8f8'}; padding: 20px; border-radius: 12px; border: 2px solid ${isCurrent ? '#667eea' : '#e0e0e0'}; transition: all 0.2s;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                            <div style="flex: 1;">
+                                <h3 style="margin: 0 0 5px 0; color: ${isCurrent ? 'white' : '#000'}; font-size: 20px;">
+                                    📖 <span id="title_${story.id}">${story.title}</span>
+                                    ${isCurrent ? '<span style="background: rgba(255,255,255,0.3); padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-left: 10px;">CURRENT</span>' : ''}
+                                </h3>
+                                <p style="margin: 0; color: ${isCurrent ? 'rgba(255,255,255,0.9)' : '#666'}; font-size: 14px;">by ${story.author || 'Unknown Author'}</p>
+                                <p style="margin: 5px 0 0 0; color: ${isCurrent ? 'rgba(255,255,255,0.7)' : '#999'}; font-size: 12px;">Last modified: ${lastModified}</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-top: 15px;">
+                            <button onclick="loadFromLibrary('${story.id}')" style="flex: 1; padding: 8px 16px; background: ${isCurrent ? 'rgba(255,255,255,0.2)' : 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}; color: white; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;" ${isCurrent ? 'disabled' : ''}>
+                                ${isCurrent ? '✓ Loaded' : '📂 Load'}
+                            </button>
+                            <button onclick="promptRenameStory('${story.id}')" style="padding: 8px 16px; background: ${isCurrent ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)'}; color: ${isCurrent ? 'white' : '#333'}; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                ✏️ Rename
+                            </button>
+                            <button onclick="deleteFromLibrary('${story.id}')" style="padding: 8px 16px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                🗑️ Delete
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Prompt to rename story
+        function promptRenameStory(storyId) {
+            const story = storyLibrary[storyId];
+            if (!story) return;
+
+            const newTitle = prompt('Enter new title for "' + story.title + '":', story.title);
+            if (newTitle && newTitle.trim() !== story.title) {
+                renameStoryInLibrary(storyId, newTitle);
+            }
+        }
+
+        // Create new story in library
+        function createNewStoryInLibrary() {
+            // Check if current story has unsaved changes
+            const currentTitle = document.getElementById('storyTitle').value;
+            const currentAuthor = document.getElementById('storyAuthor').value;
+            
+            if (currentTitle || currentAuthor || gridData.length > 0 || characters.length > 0) {
+                if (!confirm('Create a new story? Make sure to save your current work first.')) {
+                    return;
+                }
+            }
+
+            // Create new story
+            currentStoryId = 'story_' + Date.now();
+            
+            // Clear all data (call existing function)
+            createNewStory();
+            
+            showConfirmation('New story created! Don\'t forget to save it to the library.', 'info');
+        }
+
+        function saveStoryToFile() {
+            // Gather all story data
+            const data = {
+                storyTitle: document.getElementById('storyTitle').value,
+                storyAuthor: document.getElementById('storyAuthor').value,
+                gridData: gridData,
+                actNumbers: actNumbers,
+                characters: characters,
+                synopsisSections: synopsisSections,
+                characterCharts: characterCharts,
+                sceneItems: sceneItems,
+                chapters: chapters,
+                chapterPanelVisible: chapterPanelVisible,
+                snowflakeData: {
+                    oneSentence: document.getElementById('oneSentence')?.value || '',
+                    storySetup: document.getElementById('storySetup')?.value || '',
+                    firstDisaster: document.getElementById('firstDisaster')?.value || '',
+                    secondDisaster: document.getElementById('secondDisaster')?.value || '',
+                    thirdDisaster: document.getElementById('thirdDisaster')?.value || '',
+                    storyEnding: document.getElementById('storyEnding')?.value || '',
+                    fourPageOne: document.getElementById('fourPageOne')?.value || '',
+                    fourPageTwo: document.getElementById('fourPageTwo')?.value || '',
+                    fourPageThree: document.getElementById('fourPageThree')?.value || '',
+                    fourPageFour: document.getElementById('fourPageFour')?.value || '',
+                    openingHook: document.getElementById('openingHook')?.value || '',
+                    incitingIncident: document.getElementById('incitingIncident')?.value || '',
+                    firstPlotPoint: document.getElementById('firstPlotPoint')?.value || '',
+                    midpoint: document.getElementById('midpoint')?.value || '',
+                    secondPlotPoint: document.getElementById('secondPlotPoint')?.value || '',
+                    climax: document.getElementById('climax')?.value || '',
+                    resolution: document.getElementById('resolution')?.value || ''
+                },
+                plotPointSections: plotPointSections,
+                researchNotes: researchNotes,
+                customTags: customTags,
+                customCategories: customCategories,
+                timerSeconds: timerSeconds,
+                timerRunning: timerRunning,
+                currentSection: currentSection,
+                currentSnowflakeStep: currentSnowflakeStep,
+                savedDate: new Date().toISOString()
+            };
+
+            // Create filename
+            const storyTitle = data.storyTitle || 'untitled_story';
+            const sanitizedTitle = storyTitle.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+            const filename = `${sanitizedTitle}_scribr.json`;
+
+            // Create blob and download
+            const jsonString = JSON.stringify(data, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            // Update current filename
+            currentStoryFilename = storyTitle || 'Untitled Story';
+            updateFilenameDisplay();
+
+            showConfirmation('Story saved to file successfully!', 'success');
+        }
+
+        function loadStoryFromFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+
+                    // Validate data structure
+                    if (!data || typeof data !== 'object') {
+                        throw new Error('Invalid file format');
+                    }
+
+                    // Load basic info
+                    document.getElementById('storyTitle').value = data.storyTitle || '';
+                    document.getElementById('storyAuthor').value = data.storyAuthor || '';
+
+                    // Load grid data
+                    if (data.gridData) gridData = data.gridData;
+                    if (data.actNumbers) actNumbers = data.actNumbers;
+
+                    // Load characters
+                    if (data.characters) characters = data.characters;
+
+                    // Load synopsis sections
+                    if (data.synopsisSections) synopsisSections = data.synopsisSections;
+
+                    // Load character charts
+                    if (data.characterCharts) characterCharts = data.characterCharts;
+
+                    // Load scene items
+                    if (data.sceneItems) sceneItems = data.sceneItems;
+
+                    // Load chapters
+                    if (data.chapters) chapters = data.chapters;
+                    if (data.chapterPanelVisible !== undefined) chapterPanelVisible = data.chapterPanelVisible;
+
+                    // Load snowflake data
+                    if (data.snowflakeData) {
+                        setTimeout(() => {
+                            Object.keys(data.snowflakeData).forEach(key => {
+                                const element = document.getElementById(key);
+                                if (element) {
+                                    element.value = data.snowflakeData[key];
+                                }
+                            });
+                        }, 100);
+                    }
+
+                    // Load plot point sections
+                    if (data.plotPointSections && data.plotPointSections.length > 0) {
+                        plotPointSections = data.plotPointSections;
+                        renderPlotPoints();
+                    }
+
+                    // Load research notes
+                    if (data.researchNotes) {
+                        researchNotes = data.researchNotes;
+                        renderResearchNotes();
+                        updateCategoryCounts();
+                    }
+
+                    // Load custom tags
+                    if (data.customTags) {
+                        customTags = data.customTags;
+                        // Clear existing custom tags first
+                        const filterTags = document.querySelector('.filter-tags');
+                        const existingCustomTags = filterTags.querySelectorAll('.filter-tag:not([data-tag="all"]):not([data-tag="cultures"]):not([data-tag="politics"]):not([data-tag="timelines"]):not([data-tag="physics"]):not([data-tag="biology"]):not([data-tag="folklore"]):not([data-tag="myths"]):not([data-tag="relationships"])');
+                        existingCustomTags.forEach(tag => {
+                            if (tag.id !== 'customTagInput' && !tag.querySelector('#customTagInput')) {
+                                tag.remove();
+                            }
+                        });
+                        // Re-render custom tags
+                        customTags.forEach(tagName => {
+                            const newTag = document.createElement('div');
+                            newTag.className = 'filter-tag';
+                            newTag.dataset.tag = tagName;
+                            newTag.textContent = tagName;
+                            newTag.addEventListener('click', function() {
+                                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                                this.classList.add('active');
+                                currentFilter = this.dataset.tag;
+                                renderResearchNotes();
+                            });
+                            const customInput = document.getElementById('customTagInput');
+                            if (customInput) {
+                                filterTags.insertBefore(newTag, customInput);
+                            }
+                        });
+                    }
+
+                    // Load custom categories
+                    if (data.customCategories) {
+                        customCategories = data.customCategories;
+                        renderCategories();
+
+                        // Update category dropdown in note modal
+                        const categorySelect = document.getElementById('noteCategory');
+                        if (categorySelect) {
+                            // Remove existing custom categories
+                            const options = categorySelect.querySelectorAll('option');
+                            options.forEach(option => {
+                                if (!['', 'Worldbuilding', 'History', 'Science', 'Mythology', 'Character Inspiration'].includes(option.value)) {
+                                    option.remove();
+                                }
+                            });
+                            // Add loaded custom categories
+                            customCategories.forEach(cat => {
+                                const option = document.createElement('option');
+                                option.value = cat.name;
+                                option.textContent = cat.name;
+                                categorySelect.appendChild(option);
+                            });
+                        }
+                    }
+
+                    // Load timer state
+                    if (data.timerSeconds !== undefined) {
+                        timerSeconds = data.timerSeconds;
+                        updateTimerDisplay();
+                    }
+                    if (data.timerRunning && data.timerSeconds > 0) {
+                        timerRunning = false;
+                    }
+
+                    // Load current section and snowflake step
+                    if (data.currentSection) {
+                        currentSection = data.currentSection;
+                    }
+                    if (data.currentSnowflakeStep) {
+                        currentSnowflakeStep = data.currentSnowflakeStep;
+                    }
+
+                    // Refresh all UI components
+                    generateGrid();
+                    generateCharacterList();
+                    generateCharacterSynopses();
+                    generateSynopsisSections();
+                    generateCharacterCharts();
+                    generateSceneList();
+                    generateChapterList();
+                    updateSnowflakeNavigation();
+
+                    // Save to localStorage
+                    saveData();
+
+                    // Update current filename
+                    currentStoryFilename = data.storyTitle || 'Untitled Story';
+                    updateFilenameDisplay();
+
+                    showConfirmation('Story loaded successfully!', 'success');
+
+                    // Reset file input
+                    event.target.value = '';
+
+                } catch (error) {
+                    console.error('Error loading file:', error);
+                    showConfirmation('Error loading file. Please check the file format.', 'error');
+                    event.target.value = '';
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function createNewStory() {
+            // Check if there's existing data
+            const hasData = document.getElementById('storyTitle').value ||
+                           document.getElementById('storyAuthor').value ||
+                           gridData.length > 0 ||
+                           characters.length > 0 ||
+                           researchNotes.length > 0;
+
+            if (hasData) {
+                if (!confirm('Are you sure you want to create a new story? Any unsaved changes will be lost. Consider saving your current story first.')) {
+                    return;
+                }
+            }
+
+            // Clear all data
+            document.getElementById('storyTitle').value = '';
+            document.getElementById('storyAuthor').value = '';
+            gridData = [];
+            actNumbers = [];
+            characters = [];
+            synopsisSections = [];
+            characterCharts = [];
+            sceneItems = [];
+            chapters = [];
+            chapterPanelVisible = true;
+            plotPointSections = [];
+            researchNotes = [];
+            timerSeconds = 0;
+            timerRunning = false;
+            currentSection = 'snowflake';
+            currentSnowflakeStep = 'step1';
+
+            // Clear snowflake fields
+            const snowflakeFields = ['oneSentence', 'storySetup', 'firstDisaster', 'secondDisaster', 'thirdDisaster', 'storyEnding', 'fourPageOne', 'fourPageTwo', 'fourPageThree', 'fourPageFour', 'openingHook', 'incitingIncident', 'firstPlotPoint', 'midpoint', 'secondPlotPoint', 'climax', 'resolution'];
+            snowflakeFields.forEach(field => {
+                const element = document.getElementById(field);
+                if (element) element.value = '';
+            });
+
+            // Refresh all UI components
+            generateGrid();
+            generateCharacterList();
+            generateCharacterSynopses();
+            generateSynopsisSections();
+            generateCharacterCharts();
+            generateSceneList();
+            generateChapterList();
+            renderPlotPoints();
+            renderResearchNotes();
+            updateCategoryCounts();
+            updateSnowflakeNavigation();
+            updateTimerDisplay();
+
+            // Clear localStorage
+            localStorage.removeItem('storyGridsData');
+
+            // Reset filename
+            currentStoryFilename = 'Untitled Story';
+            updateFilenameDisplay();
+
+            showConfirmation('New story created!', 'success');
+        }
+
+        function updateFilenameDisplay() {
+            const filenameDisplay = document.getElementById('filenameDisplay');
+            if (filenameDisplay) {
+                filenameDisplay.textContent = currentStoryFilename;
+            }
+        }
+
+        // Update filename when story title changes
+        document.addEventListener('DOMContentLoaded', function() {
+            const storyTitleInput = document.getElementById('storyTitle');
+            if (storyTitleInput) {
+                storyTitleInput.addEventListener('input', function() {
+                    if (this.value) {
+                        currentStoryFilename = this.value;
+                        updateFilenameDisplay();
+                    }
+                });
+            }
+        });
+
 
         // Initialize default synopsis sections
         function initDefaultSynopsisSections() {
@@ -11558,6 +12318,23 @@ window.showSection = function(section) {
             </div>
         </div>
     </div>
+
+<!-- Story Library Modal -->
+<div id="storyLibraryModal" class="story-library-modal" style="display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); align-items: center; justify-content: center;">
+    <div class="story-library-content" style="background: white; border-radius: 20px; padding: 30px; max-width: 900px; max-height: 80vh; overflow-y: auto; position: relative; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);">
+        <button onclick="closeStoryLibrary()" style="position: absolute; top: 15px; right: 15px; background: rgba(0, 0, 0, 0.1); border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 24px; cursor: pointer; color: #666; transition: all 0.2s;" onmouseover="this.style.background='rgba(0, 0, 0, 0.2)';" onmouseout="this.style.background='rgba(0, 0, 0, 0.1)';">×</button>
+        
+        <h2 style="margin: 0 0 20px 0; color: #000; font-size: 28px;">📚 My Stories</h2>
+        
+        <div id="storyLibraryList" style="display: flex; flex-direction: column; gap: 15px;">
+            <!-- Story cards will be inserted here -->
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px; color: #999; font-size: 14px;" id="emptyLibraryMessage">
+            No saved stories yet. Click "Save" to add your current story to the library.
+        </div>
+    </div>
+</div>
 
 <!-- Image Modal -->
 <div id="vrrImageModal" class="vrr-modal" style="display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); align-items: center; justify-content: center;">
